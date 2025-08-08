@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 1880784462}
   - component: {fileID: 1880784461}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Octopus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "WASD",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "424dd760-2444-4bc6-b079-f713c95f3e2d",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Dash/Stealth",
