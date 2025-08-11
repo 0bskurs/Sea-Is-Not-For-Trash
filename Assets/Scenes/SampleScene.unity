@@ -350,6 +350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1880784462}
   - component: {fileID: 1880784461}
+  - component: {fileID: 1880784463}
+  - component: {fileID: 1880784465}
   m_Layer: 0
   m_Name: Octopus
   m_TagString: Untagged
@@ -427,6 +429,96 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880784463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880784460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e9308b0972cf254e98348646b773327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  PlayerController:
+    m_Name: Player Controller
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e3c355f5-66da-4869-a3af-b4aaed0e22e9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: da992ac7-89c1-40e2-b9a5-e7ee52eb9d9d
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controller
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 980e0817-27b2-4860-ba66-a0cf216042e7
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controller
+      m_Flags: 8
+    - m_Name: down
+      m_Id: 8664ba29-02d6-4430-b1af-b095decfe9c8
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controller
+      m_Flags: 8
+    - m_Name: left
+      m_Id: bef16dac-f195-4816-b8c6-b0ddd9f9b260
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controller
+      m_Flags: 8
+    - m_Name: right
+      m_Id: aef22faf-d269-49a0-805f-40399b8fbd93
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Player Controller
+      m_Flags: 8
+    m_Flags: 0
+  _rigidbody: {fileID: 1880784465}
+--- !u!50 &1880784465
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880784460}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

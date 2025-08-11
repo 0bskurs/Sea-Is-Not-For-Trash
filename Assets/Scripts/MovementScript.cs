@@ -1,19 +1,32 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MovementScript : MonoBehaviour
 {
-    private Vector2 currentPosition;
-    public bool keyIsPressed;
-    public float speed;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public float speed = 1f;
+    [SerializeField] private InputAction PlayerController;
+    bool isColliding;
+    [SerializeField] private Rigidbody2D _rigidbody;
+    Vector2 movement = Vector2.zero;
+    GameObject _gameObject;
+
+    private void OnEnable()
+    {
+        PlayerController.Enable();
+    }
+    private void OnDisable()
+    {
+        PlayerController.Disable();
+    }
+
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        movement = PlayerController.ReadValue<Vector2>();
+        Debug.Log(movement.x);
+       _rigidbody.linearVelocity = new Vector2(movement.x * 1.3f * speed, movement.y * speed * 0.9f);
     }
 }

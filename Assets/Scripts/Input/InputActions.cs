@@ -72,7 +72,7 @@ using UnityEngine.InputSystem.Utilities;
 /// }
 /// </code>
 /// </example>
-public partial class @InputActions: IInputActionCollection2, IDisposable
+public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 {
     /// <summary>
     /// Provides access to the underlying asset instance.
@@ -82,7 +82,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     /// <summary>
     /// Constructs a new instance.
     /// </summary>
-    public @InputActions()
+    public @PlayerInputActions()
     {
         asset = InputActionAsset.FromJson(@"{
     ""version"": 1,
@@ -189,9 +189,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Movimento_DashStealth = m_Movimento.FindAction("Dash/Stealth", throwIfNotFound: true);
     }
 
-    ~@InputActions()
+    ~@PlayerInputActions()
     {
-        UnityEngine.Debug.Assert(!m_Movimento.enabled, "This will cause a leak and performance issues, InputActions.Movimento.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Movimento.enabled, "This will cause a leak and performance issues, PlayerInputActions.Movimento.Disable() has not been called.");
     }
 
     /// <summary>
@@ -274,12 +274,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     /// </summary>
     public struct MovimentoActions
     {
-        private @InputActions m_Wrapper;
+        private @PlayerInputActions m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public MovimentoActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public MovimentoActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
         /// Provides access to the underlying input action "Movimento/WASD".
         /// </summary>
