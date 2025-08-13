@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: 0f03fb8c35f3257498b6c86b6e7442bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7533543496227113545
+    second: algas_0
+  - first:
+      213: -1104128460738347548
+    second: algas_1
+  - first:
+      213: 4009732499032191557
+    second: algas_2
+  - first:
+      213: 5670231871120736187
+    second: algas_3
+  - first:
+      213: 3481278868408319907
+    second: algas_4
+  - first:
+      213: 8374945599772501452
+    second: algas_5
+  - first:
+      213: -317295258695677008
+    second: algas_6
+  - first:
+      213: -6704459263035637048
+    second: algas_7
+  - first:
+      213: 2895377897423230069
+    second: algas_8
+  - first:
+      213: 5029318327386408095
+    second: algas_9
+  - first:
+      213: 5241349246946854127
+    second: algas_10
+  - first:
+      213: 2195176771975302492
+    second: algas_11
+  - first:
+      213: -5821684193881676183
+    second: algas_12
+  - first:
+      213: -7092809097657955434
+    second: algas_13
+  - first:
+      213: 863464464902223156
+    second: algas_14
+  - first:
+      213: -5911752150122955381
+    second: algas_15
+  - first:
+      213: 1911535566930802175
+    second: algas_16
+  - first:
+      213: -7057950079072488055
+    second: algas_17
+  - first:
+      213: 6566402237033465454
+    second: algas_18
+  - first:
+      213: 3769830009321172575
+    second: algas_19
+  - first:
+      213: -8711792813101335647
+    second: algas_20
+  - first:
+      213: -1388767027929296482
+    second: algas_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: algas_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 127
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5bd67ca1a737790800000000000000
+      internalID: -7533543496227113545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 127
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4edba4fc3095da0f0800000000000000
+      internalID: -1104128460738347548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 127
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5423721a67e65a730800000000000000
+      internalID: 4009732499032191557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 127
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbfff3838d5b0be40800000000000000
+      internalID: 5670231871120736187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 127
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af3d8bafacff4030800000000000000
+      internalID: 3481278868408319907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 95
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc529af86a8c93470800000000000000
+      internalID: 8374945599772501452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 95
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb4780b4adb89bf0800000000000000
+      internalID: -317295258695677008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_7
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 95
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c20faf62d9f4f2a0800000000000000
+      internalID: -6704459263035637048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 95
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574dd6a7bd27e2820800000000000000
+      internalID: 2895377897423230069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_9
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 95
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f948a3e4f5abbc540800000000000000
+      internalID: 5029318327386408095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_10
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 63
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe44708ce530db840800000000000000
+      internalID: 5241349246946854127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_11
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 63
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5dc6c0c4a5d67e10800000000000000
+      internalID: 2195176771975302492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_12
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 63
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9662d2df119353fa0800000000000000
+      internalID: -5821684193881676183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_13
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 63
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b407a74b7419d90800000000000000
+      internalID: -7092809097657955434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_14
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 63
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4357ba22b54abfb00800000000000000
+      internalID: 863464464902223156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_15
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 31
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8df4c3cdbc35fda0800000000000000
+      internalID: -5911752150122955381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_16
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 31
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff57f6a6873278a10800000000000000
+      internalID: 1911535566930802175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_17
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 31
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985b1763ccf1d0e90800000000000000
+      internalID: -7057950079072488055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_18
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 31
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66c5b65b0c802b50800000000000000
+      internalID: 6566402237033465454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_19
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 31
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e22398b60215430800000000000000
+      internalID: 3769830009321172575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_20
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab3b42f79e791780800000000000000
+      internalID: -8711792813101335647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: algas_21
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 0
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e91df700fbb1abce0800000000000000
+      internalID: -1388767027929296482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      algas_0: -7533543496227113545
+      algas_1: -1104128460738347548
+      algas_10: 5241349246946854127
+      algas_11: 2195176771975302492
+      algas_12: -5821684193881676183
+      algas_13: -7092809097657955434
+      algas_14: 863464464902223156
+      algas_15: -5911752150122955381
+      algas_16: 1911535566930802175
+      algas_17: -7057950079072488055
+      algas_18: 6566402237033465454
+      algas_19: 3769830009321172575
+      algas_2: 4009732499032191557
+      algas_20: -8711792813101335647
+      algas_21: -1388767027929296482
+      algas_3: 5670231871120736187
+      algas_4: 3481278868408319907
+      algas_5: 8374945599772501452
+      algas_6: -317295258695677008
+      algas_7: -6704459263035637048
+      algas_8: 2895377897423230069
+      algas_9: 5029318327386408095
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
