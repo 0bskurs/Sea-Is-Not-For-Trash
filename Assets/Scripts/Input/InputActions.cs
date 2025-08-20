@@ -93,15 +93,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""48745955-5d2e-4211-838e-38d27bd52b08"",
             ""actions"": [
                 {
-                    ""name"": ""WASD"",
-                    ""type"": ""Value"",
-                    ""id"": ""424dd760-2444-4bc6-b079-f713c95f3e2d"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
                     ""name"": ""Dash/Stealth"",
                     ""type"": ""Button"",
                     ""id"": ""8fc2a85e-424d-42ea-819d-61e1adafb1e0"",
@@ -109,53 +100,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""8036dc21-01ba-4859-a228-d23333e5e946"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""ab620dbe-8aef-4066-ad87-48ed90486467"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WASD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""bcf74d06-1157-4a4c-a73a-904b7a803e2a"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WASD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f28ce5d3-6188-4513-8a60-d29035226959"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WASD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4fbefccd-1cca-45f1-bfac-66af59a40c10"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""WASD"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""fd2a54e3-5e66-4e07-8f4f-b27df3d0a728"",
@@ -177,6 +133,72 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Dash/Stealth"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a275aa8c-b215-4e80-b5c0-92dbad0c88e2"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""aaa5c471-198b-4a29-8605-a8a5215bd79b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""3a94aff2-a4e1-4c5e-ad31-bc82dc5d35b9"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""11d2698a-6664-464e-b492-aa0c04b74b8c"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""fa1df3f0-ac57-4183-b7ca-4a6ed3b4ddee"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""63e849d9-88a2-470a-95c5-e48c309f966e"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -185,8 +207,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 }");
         // Movimento
         m_Movimento = asset.FindActionMap("Movimento", throwIfNotFound: true);
-        m_Movimento_WASD = m_Movimento.FindAction("WASD", throwIfNotFound: true);
         m_Movimento_DashStealth = m_Movimento.FindAction("Dash/Stealth", throwIfNotFound: true);
+        m_Movimento_Movement = m_Movimento.FindAction("Movement", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
@@ -267,8 +289,8 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // Movimento
     private readonly InputActionMap m_Movimento;
     private List<IMovimentoActions> m_MovimentoActionsCallbackInterfaces = new List<IMovimentoActions>();
-    private readonly InputAction m_Movimento_WASD;
     private readonly InputAction m_Movimento_DashStealth;
+    private readonly InputAction m_Movimento_Movement;
     /// <summary>
     /// Provides access to input actions defined in input action map "Movimento".
     /// </summary>
@@ -281,13 +303,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public MovimentoActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Movimento/WASD".
-        /// </summary>
-        public InputAction @WASD => m_Wrapper.m_Movimento_WASD;
-        /// <summary>
         /// Provides access to the underlying input action "Movimento/DashStealth".
         /// </summary>
         public InputAction @DashStealth => m_Wrapper.m_Movimento_DashStealth;
+        /// <summary>
+        /// Provides access to the underlying input action "Movimento/Movement".
+        /// </summary>
+        public InputAction @Movement => m_Wrapper.m_Movimento_Movement;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -314,12 +336,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MovimentoActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MovimentoActionsCallbackInterfaces.Add(instance);
-            @WASD.started += instance.OnWASD;
-            @WASD.performed += instance.OnWASD;
-            @WASD.canceled += instance.OnWASD;
             @DashStealth.started += instance.OnDashStealth;
             @DashStealth.performed += instance.OnDashStealth;
             @DashStealth.canceled += instance.OnDashStealth;
+            @Movement.started += instance.OnMovement;
+            @Movement.performed += instance.OnMovement;
+            @Movement.canceled += instance.OnMovement;
         }
 
         /// <summary>
@@ -331,12 +353,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="MovimentoActions" />
         private void UnregisterCallbacks(IMovimentoActions instance)
         {
-            @WASD.started -= instance.OnWASD;
-            @WASD.performed -= instance.OnWASD;
-            @WASD.canceled -= instance.OnWASD;
             @DashStealth.started -= instance.OnDashStealth;
             @DashStealth.performed -= instance.OnDashStealth;
             @DashStealth.canceled -= instance.OnDashStealth;
+            @Movement.started -= instance.OnMovement;
+            @Movement.performed -= instance.OnMovement;
+            @Movement.canceled -= instance.OnMovement;
         }
 
         /// <summary>
@@ -378,18 +400,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public interface IMovimentoActions
     {
         /// <summary>
-        /// Method invoked when associated input action "WASD" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnWASD(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "Dash/Stealth" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDashStealth(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Movement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMovement(InputAction.CallbackContext context);
     }
 }

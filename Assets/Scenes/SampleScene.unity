@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 63970676}
   - component: {fileID: 63970678}
   - component: {fileID: 63970677}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 96108643}
   - component: {fileID: 96108645}
   - component: {fileID: 96108644}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 592637784}
   - component: {fileID: 592637786}
   - component: {fileID: 592637785}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,7 +886,7 @@ GameObject:
   - component: {fileID: 692308062}
   - component: {fileID: 692308064}
   - component: {fileID: 692308063}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   - component: {fileID: 712729476}
   - component: {fileID: 712729478}
   - component: {fileID: 712729477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,7 +1106,7 @@ GameObject:
   - component: {fileID: 748107709}
   - component: {fileID: 748107711}
   - component: {fileID: 748107710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1396,7 +1396,7 @@ GameObject:
   - component: {fileID: 927753371}
   - component: {fileID: 927753373}
   - component: {fileID: 927753372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1593,7 +1593,7 @@ GameObject:
   - component: {fileID: 1413442280}
   - component: {fileID: 1413442282}
   - component: {fileID: 1413442281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1701,7 +1701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1414311017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bolhas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1866,7 @@ GameObject:
   - component: {fileID: 1762992654}
   - component: {fileID: 1762992656}
   - component: {fileID: 1762992655}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2090,7 +2090,10 @@ GameObject:
   - component: {fileID: 1880784466}
   - component: {fileID: 1880784467}
   - component: {fileID: 1880784468}
-  m_Layer: 0
+  - component: {fileID: 1880784469}
+  - component: {fileID: 1880784470}
+  - component: {fileID: 1880784471}
+  m_Layer: 6
   m_Name: Octopus
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2181,38 +2184,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  PlayerController:
+  playerController:
     m_Name: Player Controller
     m_Type: 0
     m_ExpectedControlType: 
-    m_Id: e3c355f5-66da-4869-a3af-b4aaed0e22e9
+    m_Id: f8927357-53bc-4bf6-adb9-aed75e1a6a4a
     m_Processors: 
     m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: da992ac7-89c1-40e2-b9a5-e7ee52eb9d9d
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controller
-      m_Flags: 4
-    - m_Name: left
-      m_Id: bef16dac-f195-4816-b8c6-b0ddd9f9b260
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controller
-      m_Flags: 8
-    - m_Name: right
-      m_Id: aef22faf-d269-49a0-805f-40399b8fbd93
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Player Controller
-      m_Flags: 8
+    m_SingletonActionBindings: []
     m_Flags: 0
   _rigidbody: {fileID: 1880784465}
 --- !u!50 &1880784465
@@ -2323,6 +2302,108 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thatObjectCollected: 0
+--- !u!114 &1880784469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880784460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538da0dc44ff21d49b7e46e764227c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxLife: 2
+  Currentlife: 0
+  Lifes: []
+--- !u!114 &1880784470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880784460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2cf9ae33ecd8fde42a38358d70c6dcd2, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1880784471}
+        m_TargetAssemblyTypeName: Esquiva, Assembly-CSharp
+        m_MethodName: OnToggleCollision
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8fc2a85e-424d-42ea-819d-61e1adafb1e0
+    m_ActionName: 'Movimento/Dash/Stealth[/Keyboard/space,/Keyboard/shift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1880784463}
+        m_TargetAssemblyTypeName: MovementScript, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 8036dc21-01ba-4859-a228-d23333e5e946
+    m_ActionName: 'Movimento/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Movimento
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 519420031}
+--- !u!114 &1880784471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880784460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca55709930b1db44eae8bf666da61238, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1880784460}
+  PlayerController:
+    m_Name: Player Controller
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8d460f8a-cd5d-41f7-912d-eebb79936ec7
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  inputActionReference: {fileID: -8091108266900459468, guid: 2cf9ae33ecd8fde42a38358d70c6dcd2, type: 3}
+  isOnCooldown: 0
+  cooldownTime: 5
 --- !u!1 &1984656867
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,7 +2604,7 @@ GameObject:
   - component: {fileID: 2105478109}
   - component: {fileID: 2105478111}
   - component: {fileID: 2105478110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,9 +9,10 @@ public class ColetaItem : MonoBehaviour
     {
         if (other.CompareTag("Coletavel"))
         {
+            thatObjectCollected = true;
             Debug.Log("Colatado " + other.name);
             Destroy(other.gameObject);
-            thatObjectCollected = true;
+            
         }
     }
 }
