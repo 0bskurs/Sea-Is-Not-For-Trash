@@ -834,16 +834,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a97fde5947b1154c8ae96444f38467e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonLixosToSpawn:
+  commonTrashToSpawn:
   - {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
-  rareLixosToSpawn:
+  rareTrashToSpawn:
   - {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
-  extremeLixosToSpawn:
+  extremeTrashToSpawn:
   - {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
   randomIndex: 0
   spawnInterval: 2
   spawnDelay: 6
-  total: 0
   spawnAreaMin: {x: -10, y: 9}
   spawnAreaMax: {x: 15, y: 9}
   randomNumber: 0

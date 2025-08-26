@@ -54,13 +54,13 @@ public class PrefabSpawn : MonoBehaviour
             randomNumber = UnityEngine.Random.Range(0, commonTrashToSpawn.Count);
             GameObject chosenPrefab = commonTrashToSpawn[randomNumber];
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-            Debug.Log("Common trash spawned");
+            Debug.Log("Common rarity trash spawned");
         }
         else if ((randomIndex < 21) && (randomIndex > 5))
         {
             randomNumber = UnityEngine.Random.Range(0, rareTrashToSpawn.Count);
             GameObject chosenPrefab = rareTrashToSpawn[randomNumber];
-            Debug.Log("Rare trash spawned");
+            Debug.Log("Rare rarity trash spawned");
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
         }
         else if (randomIndex < 6)
@@ -68,7 +68,7 @@ public class PrefabSpawn : MonoBehaviour
             randomNumber = UnityEngine.Random.Range(0, extremeTrashToSpawn.Count);
             GameObject chosenPrefab = extremeTrashToSpawn[randomNumber];
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-            Debug.Log("Extreme trash spawned");
+            Debug.Log("Extreme rarity trash spawned");
         }
         // instanciar prefab
         

@@ -10,23 +10,24 @@ public class LifeSystem : MonoBehaviour
     [Header("How much until other game object is destroyed (in milliseconds).")][SerializeField] private int waitForTask;
 
     private void Awake(){Currentlife = MaxLife;}
-
+    private void Start()
+    {
+        
+    }
     private async void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Trash"))
         {
-            await Task.Delay(waitForTask);
             Debug.Log("Em contato");
-            DisableImages();
+            Invoke("DisableImages",0.1f);
             Destroy(other.gameObject);
         }
     }
 
-    private void DisableImages()
+    async Task DisableImages()
     {
         Currentlife -= 1;
-        Lifes[Currentlife].gameObject.SetActive(false);
-        if(Currentlife <= 0) { Destroy(gameObject); } // Subtituir por uma troca de cena,SceneManagement
+        if (Currentlife <= 0) { Destroy(this.gameObject); } // Subtituir por uma troca de cena,SceneManagement
     }
     
 }
