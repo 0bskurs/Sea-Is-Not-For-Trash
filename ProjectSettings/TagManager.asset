@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coletavel
   - Trash
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ public class MovementScript : MonoBehaviour
     Vector2 movement = Vector2.zero;
     GameObject _gameObject;
     
-    float horizontalMovement;
+   public float horizontalMovement;
 
     private void Awake()
     {
