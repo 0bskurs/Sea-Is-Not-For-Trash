@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class RetreatWall : MonoBehaviour
 {
     [SerializeField] private MovementScript movementScript;
@@ -13,9 +13,25 @@ public class RetreatWall : MonoBehaviour
     {
         if (other.CompareTag("Wall"))
         {
-            movementScript.horizontalMovement = movementScript.horizontalMovement * -1f;
+            
             Debug.Log("Touching the wall!!");
+            
         }
     }
-    
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Wall"))
+        {
+            movementScript.horizontalMovement = movementScript.horizontalMovement * -1f;
+        }
+    }
+    public IEnumerator MethodWithDelay()
+    {
+        //some inital logic here
+
+        yield return new WaitForSeconds(0.2f); //delay here
+        movementScript.horizontalMovement = movementScript.horizontalMovement * -1f;
+        //rest of logic here
+    }
+
 }
