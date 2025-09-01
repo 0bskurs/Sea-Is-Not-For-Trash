@@ -32,6 +32,7 @@ public class PrefabSpawn : MonoBehaviour
 
     async Task SpawnRandomPrefab()
     {
+        await Task.Delay(0);
         total += 1;
 
         Debug.Log($"SpawnRandomPrefab called " + total + " times.");
