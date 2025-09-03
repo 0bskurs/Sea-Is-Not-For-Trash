@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-public class PrefabSpawn : MonoBehaviour
+public class LixoRuimSpawn : MonoBehaviour
 {
     public List<GameObject> commonTrashToSpawn;
     // 80% de chance
@@ -76,5 +76,7 @@ public class PrefabSpawn : MonoBehaviour
 
        
     }
-    
+// Separator
+
+
 }
