@@ -19,20 +19,22 @@ public class LixoRuimSpawn : MonoBehaviour
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
     public int randomNumber;
-    int randomTimeChosen;
+    [SerializeField] private int randomTimeChosen;
     [SerializeField] private int randomTimeMin;
     [SerializeField] private int randomTimeMax;
 
     void Start()
     {
-
         randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
-        InvokeRepeating("SpawnRandomPrefab",8f, 6f);
-    }
 
+        InvokeRepeating("SpawnRandomPrefab",8f, randomTimeChosen);
+    }
+    
     async Task SpawnRandomPrefab()
     {
-        await Task.Delay(0);
+        
+        await Task.Delay(500);
+        randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
         total += 1;
 
         Debug.Log($"SpawnRandomPrefab called " + total + " times.");

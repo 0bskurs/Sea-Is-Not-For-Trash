@@ -29,7 +29,7 @@ public class LixoComputadorSpawn : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene().buildIndex;
-        
+        randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
 
         setSpawnStart = UnityEngine.Random.Range(minimumSpawnDelay, maximumSpawnDelay);
         

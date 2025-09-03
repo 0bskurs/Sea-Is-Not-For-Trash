@@ -848,8 +848,9 @@ MonoBehaviour:
   spawnAreaMin: {x: -10, y: 9}
   spawnAreaMax: {x: 15, y: 9}
   randomNumber: 0
-  randomTimeMin: 4
-  randomTimeMax: 10
+  randomTimeChosen: 0
+  randomTimeMin: 2
+  randomTimeMax: 6
 --- !u!114 &621893863
 MonoBehaviour:
   m_ObjectHideFlags: 0
