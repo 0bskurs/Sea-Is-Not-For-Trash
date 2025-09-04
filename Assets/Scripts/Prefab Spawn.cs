@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
-public class LixoRuimSpawn : MonoBehaviour
+public class PrefabSpawn : MonoBehaviour
 {
     public List<GameObject> commonTrashToSpawn;
     // 80% de chance
@@ -19,22 +19,20 @@ public class LixoRuimSpawn : MonoBehaviour
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
     public int randomNumber;
-    [SerializeField] private int randomTimeChosen;
+    int randomTimeChosen;
     [SerializeField] private int randomTimeMin;
     [SerializeField] private int randomTimeMax;
 
     void Start()
     {
-        randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
 
-        InvokeRepeating("SpawnRandomPrefab",8f, randomTimeChosen);
+        randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
+        InvokeRepeating("SpawnRandomPrefab",8f, 6f);
     }
-    
+
     async Task SpawnRandomPrefab()
     {
-        
-        await Task.Delay(500);
-        randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
+        await Task.Delay(0);
         total += 1;
 
         Debug.Log($"SpawnRandomPrefab called " + total + " times.");
@@ -78,7 +76,5 @@ public class LixoRuimSpawn : MonoBehaviour
 
        
     }
-// Separator
-
-
+    
 }
