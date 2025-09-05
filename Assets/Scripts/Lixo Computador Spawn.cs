@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LixoComputadorSpawn : MonoBehaviour
@@ -33,7 +32,7 @@ public class LixoComputadorSpawn : MonoBehaviour
 
         setSpawnStart = UnityEngine.Random.Range(minimumSpawnDelay, maximumSpawnDelay);
         
-        InvokeRepeating("SpawnSpecificPrefab",setSpawnStart, randomTimeChosen);
+        InvokeRepeating("SpawnSpecificPrefab",setSpawnStart, 1000000000000000000f);
     }
 
     async Task SpawnSpecificPrefab()
@@ -59,10 +58,10 @@ public class LixoComputadorSpawn : MonoBehaviour
         
 
 
-        if (scene == 0)
+        if (scene == 1)
         {
             
-            specificPrefab = scene;
+            specificPrefab = scene - 1;
             GameObject chosenPrefab = PecaComputadorSpawn[specificPrefab];
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
             Debug.Log("Computer part spawned!");
