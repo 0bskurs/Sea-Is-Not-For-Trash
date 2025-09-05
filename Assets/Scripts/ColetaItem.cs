@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ColetaItem : MonoBehaviour
 {
@@ -11,8 +12,15 @@ public class ColetaItem : MonoBehaviour
         {
             thatObjectCollected = true;
             Debug.Log("Colatado " + other.name);
-            Destroy(other.gameObject);
-            
+            Invoke("ChangeScene", 0.1f);
+
         }
     }
+    async Task ChangeScene()
+    {
+        await Task.Delay(3500);
+        SceneManager.LoadSceneAsync(3);
+
+    }
 }
+

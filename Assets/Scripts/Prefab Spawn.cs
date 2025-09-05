@@ -50,21 +50,21 @@ public class PrefabSpawn : MonoBehaviour
         float randomX = UnityEngine.Random.Range(spawnAreaMin.x, spawnAreaMax.x);
         Vector3 spawnPosition = new Vector3(randomX, randomY, 0f); // z é 0
 
-        if (randomIndex > 20)
+        if (randomIndex > 40)
         {
             randomNumber = UnityEngine.Random.Range(0, commonTrashToSpawn.Count);
             GameObject chosenPrefab = commonTrashToSpawn[randomNumber];
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
             Debug.Log("Common rarity trash spawned");
         }
-        else if ((randomIndex < 21) && (randomIndex > 5))
+        else if ((randomIndex < 41) && (randomIndex > 10))
         {
             randomNumber = UnityEngine.Random.Range(0, rareTrashToSpawn.Count);
             GameObject chosenPrefab = rareTrashToSpawn[randomNumber];
             Debug.Log("Rare rarity trash spawned");
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
         }
-        else if (randomIndex < 6)
+        else if (randomIndex < 11)
         {
             randomNumber = UnityEngine.Random.Range(0, extremeTrashToSpawn.Count);
             GameObject chosenPrefab = extremeTrashToSpawn[randomNumber];

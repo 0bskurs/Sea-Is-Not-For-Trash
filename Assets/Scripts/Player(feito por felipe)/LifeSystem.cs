@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.Animations;
 using Unity.VisualScripting;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public class LifeSystem : MonoBehaviour
 {
     [SerializeField] private int MaxLife = 3;
@@ -50,7 +51,8 @@ public class LifeSystem : MonoBehaviour
         if (Currentlife <= 0) 
         {
             
-            Destroy(this.gameObject); 
+            await Task.Delay(2000);
+            SceneManager.LoadSceneAsync(2);
         } // Subtituir por uma troca de cena,SceneManagement
 
 
