@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263b82685b5e9e948b8ada85cda7795b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyYCoordinate: -8
+  destroyYCoordinate: -10
 --- !u!114 &546941135558433016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,3 +164,5 @@ MonoBehaviour:
   fallSpeed: 1
   fallDirection: {x: 0, y: -1}
   objectWeight: 10
+  isComputerPart: 0
+  touchedCollider: 0

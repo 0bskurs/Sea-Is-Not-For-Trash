@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEditor;
+using System.Threading.Tasks;
 public class Esquiva : MonoBehaviour
 {
     private Vector2 playerPosition;
@@ -10,8 +11,9 @@ public class Esquiva : MonoBehaviour
     [SerializeField] private InputAction PlayerController;
     [SerializeField] public InputActionReference inputActionReference;
     [SerializeField] private bool isOnCooldown = false;
-    [SerializeField] private float cooldownTime = 5f;
-    
+    [SerializeField] private int cooldownTime = 15;
+    [SerializeField] private int invincibilityTime = 3;
+
     private bool keyPressed;
     private void Start()
     {
@@ -21,20 +23,23 @@ public class Esquiva : MonoBehaviour
     {
         
     }
-    private System.Collections.IEnumerator DisableCollisionTemporarily()
+    private async Task DisableCollisionTemp()
     {
         isOnCooldown = true;
         Physics2D.IgnoreLayerCollision(6, 7, true);
-        yield return new WaitForSeconds(cooldownTime);
+        await Task.Delay(invincibilityTime * 1000);
         Physics2D.IgnoreLayerCollision(6, 7, false);
+        await Task.Delay(cooldownTime * 1000);
         isOnCooldown = false;
     }
-    public void OnToggleCollision(InputAction.CallbackContext context)
+    
+    public void OnToggleCollision2D(InputAction.CallbackContext context)
     {
         
-        if (context.performed && !isOnCooldown)
+        if (context.performed && !isOnCooldown==true)
         {
-            StartCoroutine(DisableCollisionTemporarily());
+            Invoke(nameof(DisableCollisionTemp), 0);
+
         }
     }
 

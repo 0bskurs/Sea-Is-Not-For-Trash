@@ -2,17 +2,45 @@ using NUnit.Framework;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
+using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class PrefabSpawn : MonoBehaviour
 {
+    [SerializeField]
     public List<GameObject> commonTrashToSpawn;
-    // 80% de chance
+    // 
     public List<GameObject> rareTrashToSpawn;
-    // 15% de chance
+    // 
     public List<GameObject> extremeTrashToSpawn;
-    // 5% de chance
+    // 
+    [Serializable]
+    public class GameObjectRarity
+    {
+        public GameObject prefab;
+        public int chance;
+        public int specificScene;
+
+    }
+    [SerializeField] private GameObjectRarity[] gameObjectRarities;
+
+
+    private void Awake()
+    {
+        
+
+    }
+    
     public int randomIndex;
+    public int scene;
+
+    
+    
+    
+
     public float spawnInterval = 2f; 
     public float spawnDelay = 0f; 
     int total = 0;
@@ -23,9 +51,10 @@ public class PrefabSpawn : MonoBehaviour
     [SerializeField] private int randomTimeMin;
     [SerializeField] private int randomTimeMax;
 
+    
     void Start()
     {
-
+        scene = SceneManager.GetActiveScene().buildIndex;
         randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
         InvokeRepeating("SpawnRandomPrefab",8f, 6f);
     }
@@ -78,3 +107,4 @@ public class PrefabSpawn : MonoBehaviour
     }
     
 }
+
