@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using NUnit.Framework;
 using System;
 using System.Collections;
@@ -17,37 +18,33 @@ public class PrefabSpawn : MonoBehaviour
     // 
     public List<GameObject> extremeTrashToSpawn;
     // 
-    [Serializable]
+    [System.Serializable]
     public class GameObjectRarity
     {
-        [SerializeField] public ChanceOnScene[] chanceOnScene;
         public GameObject prefab;
-        [Serializable]
+        [System.Serializable]
         public class ChanceOnScene
         {
             public int specificScene;
             public int chance;
         }
-
+        public ChanceOnScene[] chanceOnScene;
     }
-    [SerializeField] private GameObjectRarity[] gameObjectRarities;
+    
+    [SerializeField] public GameObjectRarity[] gameObjectRarities;
     // Scene 1 : Level 1
     // Scene 4 : Level 2
     // Scene 5 : Level 3
     // Scene 6 : Level 4
+    
     private void Awake()
     {
-
+        
        
     }
     
     public int randomIndex;
     public int scene;
-
-    
-    
-    
-
     public float spawnInterval = 2f; 
     public float spawnDelay = 0f; 
     int total = 0;
@@ -107,11 +104,23 @@ public class PrefabSpawn : MonoBehaviour
             Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
             Debug.Log("Extreme rarity trash spawned");
         }
-        // instanciar prefab
-        
 
-       
+        // instanciar prefab
+        if (gameObjectRarities != null || gameObjectRarities.Length != 0)
+        {
+
+            for (int i = 0; i < gameObjectRarities.Length; i++)
+            {
+
+                GameObject prefabChosen = gameObjectRarities[i].prefab;
+                for (int j = 0; j < gameObjectRarities[i].chanceOnScene.Length; j++)
+                {
+
+                    int currentScene = gameObjectRarities[i].chanceOnScene[j].specificScene;
+                    int chance = gameObjectRarities[i].chanceOnScene[j].chance;
+                }
+            }
+        }
     }
-    
 }
 
