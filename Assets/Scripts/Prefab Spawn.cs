@@ -20,18 +20,25 @@ public class PrefabSpawn : MonoBehaviour
     [Serializable]
     public class GameObjectRarity
     {
+        [SerializeField] public ChanceOnScene[] chanceOnScene;
         public GameObject prefab;
-        public int chance;
-        public int specificScene;
+        [Serializable]
+        public class ChanceOnScene
+        {
+            public int specificScene;
+            public int chance;
+        }
 
     }
     [SerializeField] private GameObjectRarity[] gameObjectRarities;
-
-
+    // Scene 1 : Level 1
+    // Scene 4 : Level 2
+    // Scene 5 : Level 3
+    // Scene 6 : Level 4
     private void Awake()
     {
-        
 
+       
     }
     
     public int randomIndex;

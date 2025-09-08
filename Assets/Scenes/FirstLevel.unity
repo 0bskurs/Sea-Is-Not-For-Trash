@@ -843,9 +843,11 @@ MonoBehaviour:
   extremeTrashToSpawn:
   - {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
   gameObjectRarities:
-  - prefab: {fileID: 0}
-    chance: 0
-    specificScene: 0
+  - chanceOnScene:
+    - specificScene: 0
+      chance: 0
+    prefab: {fileID: 0}
+  chanceOnScene: []
   randomIndex: 0
   scene: 0
   spawnInterval: 3
