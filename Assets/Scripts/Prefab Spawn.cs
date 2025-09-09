@@ -77,8 +77,15 @@ public class PrefabSpawn : MonoBehaviour
         scene = SceneManager.GetActiveScene().buildIndex;
         randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
         InvokeRepeating("SpawnRandomPrefab",8f, 6f);
-        
+        Invoke("StartScript", 0.2f);
+        Invoke("Orderer",0.3f);
 
+        
+        
+    }
+    async Task StartScript()
+    {
+        await Task.Delay(100);
         if (scene == 1)
         {
             sceneToPrefab = 0;
@@ -103,7 +110,7 @@ public class PrefabSpawn : MonoBehaviour
         x = anchors[sceneToPrefab].chancePoint;
         y = radioactiveWastes[sceneToPrefab].chancePoint;
         z = bottles[sceneToPrefab].chancePoint;
-        
+
         a = anchors[sceneToPrefab].prefab;
         b = radioactiveWastes[sceneToPrefab].prefab;
         c = bottles[sceneToPrefab].prefab;
@@ -112,7 +119,7 @@ public class PrefabSpawn : MonoBehaviour
             chance_3rd = 0;
             Debug.Log("Anchor prefab chance point is 0.");
         }
-        
+
 
         if (y == 0)
         {
@@ -124,20 +131,10 @@ public class PrefabSpawn : MonoBehaviour
             chance_3rd = 0;
             Debug.Log("Bottle prefab chance point is 0.");
         }
-        totalChance = anchors[sceneToPrefab].chancePoint + radioactiveWastes[sceneToPrefab].chancePoint + bottles[sceneToPrefab].chancePoint;
-        if (totalChance != 100)
-        {
-            Debug.LogWarning("Total chance does not equal 100%. Please check the prefab chances.");
-        }
-        if (totalChance == 100)
-        {
-            Debug.Log("Total chance equals 100%");
-
-
-        }
     }
-    private void FixedUpdate()
+    async Task Orderer()
     {
+        await Task.Delay(300);
         if ((x > y) && (y > z))
         {
             chance_1st = x;
@@ -232,7 +229,7 @@ public class PrefabSpawn : MonoBehaviour
                 Debug.Log("Rare rarity trash spawned");
                 Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
             }
-            else if (randomIndex <= chance_3rd)
+            else if (randomIndex <= chance_2nd)
             {
                 
                 GameObject chosenPrefab = prefab3;
@@ -249,7 +246,7 @@ public class PrefabSpawn : MonoBehaviour
                 Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
                 Debug.Log("Common rarity trash spawned");
             }
-            else if ((randomIndex <= chance_1st) && (randomIndex > chance_2nd))
+            else if (randomIndex <= chance_1st)
             {
 
                 GameObject chosenPrefab = prefab2;
