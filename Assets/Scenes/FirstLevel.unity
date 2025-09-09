@@ -836,27 +836,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a97fde5947b1154c8ae96444f38467e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  commonTrashToSpawn:
-  - {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
-  rareTrashToSpawn:
-  - {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
-  extremeTrashToSpawn:
-  - {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
-  gameObjectRarities:
-  - chanceOnScene:
-    - specificScene: 0
-      chance: 0
-    prefab: {fileID: 0}
-  chanceOnScene: []
+  prefab1: {fileID: 0}
+  prefab2: {fileID: 0}
+  prefab3: {fileID: 0}
+  anchors:
+  - prefab: {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
+    specificScene: 1
+    chancePoint: 0
+  - prefab: {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
+    specificScene: 4
+    chancePoint: 40
+  bottles:
+  - prefab: {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
+    specificScene: 1
+    chancePoint: 10
+  radioactiveWastes:
+  - prefab: {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
+    specificScene: 1
+    chancePoint: 50
   randomIndex: 0
   scene: 0
-  spawnInterval: 3
+  spawnInterval: 1
   spawnDelay: 7
   spawnAreaMin: {x: -10, y: 9}
   spawnAreaMax: {x: 15, y: 9}
   randomNumber: 0
-  randomTimeMin: 4
-  randomTimeMax: 7
+  randomTimeMin: 1
+  randomTimeMax: 2
+  totalChance: 0
+  sceneToPrefab: 0
+  chance_1st: 0
+  chance_2nd: 0
+  chance_3rd: 0
+  x: 0
+  y: 0
+  z: 0
+  a: {fileID: 0}
+  b: {fileID: 0}
+  c: {fileID: 0}
 --- !u!114 &621893863
 MonoBehaviour:
   m_ObjectHideFlags: 0
