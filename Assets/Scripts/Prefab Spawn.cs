@@ -17,35 +17,83 @@ public class PrefabSpawn : MonoBehaviour
     // Scene 4 : Level 2
     // Scene 5 : Level 3
     // Scene 6 : Level 4
+    public int countTaskStages;
     [System.Serializable]
     public class WeightedObject
     {
         public GameObject prefabToSpawn;  // The prefab to spawn
         public int weight;                // The weight for the chance of spawning this object
     }
-
+    [System.Serializable]
+    public class Stages
+    {
+        public string name;          // Stage Name
+        public float stageStartTime; // Time when the stage starts
+        public float minusSpawnTime; // Time cooldown decrease for spawning prefabs
+    }
+    public List<Stages> stages;
     public List<WeightedObject> spawnOptions;
-
+    
     // Dictionary for storing spawn weights per scene
     [SerializeField] private Dictionary<string, List<WeightedObject>> sceneSpawnWeights = new Dictionary<string, List<WeightedObject>>();
 
     // Spawn interval in seconds
-    public float spawnInterval = 2.0f;
+    public float spawnInterval;
 
     // Spawn area (min/max x values)
     public float minX = -8f;
     public float maxX = 8f;
-
+    public float timer;
+    public float spawnStart;
+    public bool Task1 = true;
+    public bool Task2 = false;
+    public bool Task3 = false;
+    public bool Task4 = false;
+    public bool Task5 = false;
+    public bool Task6 = false;
     // Start method to initiate the spawning process
     void Start()
     {
+        spawnInterval = spawnStart;
+        InvokeRepeating("StageTimer", 5, 0.2f);
         // Set up the spawn weights for each scene (using default values for now)
         SetSceneWeights();
-
+        
         // Start the spawn coroutine to spawn objects continuously (temporarily for testing)
         StartCoroutine(SpawnObjectContinuously());
     }
-
+    
+    async Task StageTimer()
+    {
+        await Task.Delay(500);
+        if (stages[1].stageStartTime < timer && Task1 == true)
+        {
+            spawnInterval -= stages[1].minusSpawnTime;
+            Task1 = false;
+            Task2 = true;
+        }
+        else if (stages[2].stageStartTime < timer && Task2 == true)
+        {
+            spawnInterval -= stages[2].minusSpawnTime;
+            Task2 = false;
+            Task3 = true;
+        }
+        else if (stages[3].stageStartTime < timer && Task3 == true)
+        {
+            spawnInterval -= stages[2].minusSpawnTime;
+            Task3 = false;
+            Task4 = true;
+        }
+        else if (stages[4].stageStartTime < timer && Task4 == true)
+        {
+            spawnInterval -= stages[3].minusSpawnTime;
+            Task4 = false;
+            Task5 = true;
+        }
+            
+       
+        
+    }
     // Set the weights for each scene, this can be expanded for more scenes
     void SetSceneWeights()
     {
@@ -65,7 +113,15 @@ public class PrefabSpawn : MonoBehaviour
             yield return new WaitForSeconds(spawnInterval);
         }
     }
-
+    IEnumerator Countdown(int seconds)
+    {
+        timer = seconds;
+        while (timer > 0)
+        {
+            yield return new WaitForSeconds(1);
+            timer++;
+        }
+    }
     // Spawn an object based on weighted chances for the current scene
     public void SpawnObject()
     {
