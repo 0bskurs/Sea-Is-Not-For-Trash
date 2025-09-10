@@ -11,258 +11,116 @@ using UnityEngine.SceneManagement;
 
 public class PrefabSpawn : MonoBehaviour
 {
-    
+
 
     // Scene 1 : Level 1
     // Scene 4 : Level 2
     // Scene 5 : Level 3
     // Scene 6 : Level 4
-    
     [System.Serializable]
-    public class Bottle
+    public class WeightedObject
     {
-        public GameObject prefab;
-        public int specificScene;
-        public int chancePoint;
+        public GameObject prefabToSpawn;  // The prefab to spawn
+        public int weight;                // The weight for the chance of spawning this object
     }
-    [System.Serializable]
-    public class RadioactiveWaste
-    {
-        public GameObject prefab;
-        public int specificScene;
-        public int chancePoint;
-    }
-    [System.Serializable]
-    public class Anchor
-    {
-        public GameObject prefab;
-        public int specificScene;
-        public int chancePoint;
-    }
-    public GameObject prefab1;
-    public GameObject prefab2;
-    public GameObject prefab3;
 
-    [SerializeField] public Anchor[] anchors;
-    [SerializeField] public Bottle[] bottles;
-    [SerializeField] public RadioactiveWaste[] radioactiveWastes;
+    public List<WeightedObject> spawnOptions;
+
+    // Dictionary for storing spawn weights per scene
+    [SerializeField] private Dictionary<string, List<WeightedObject>> sceneSpawnWeights = new Dictionary<string, List<WeightedObject>>();
+
+    // Spawn interval in seconds
+    public float spawnInterval = 2.0f;
+
+    // Spawn area (min/max x values)
+    public float minX = -8f;
+    public float maxX = 8f;
+
+    // Start method to initiate the spawning process
+    void Start()
+    {
+        // Set up the spawn weights for each scene (using default values for now)
+        SetSceneWeights();
+
+        // Start the spawn coroutine to spawn objects continuously (temporarily for testing)
+        StartCoroutine(SpawnObjectContinuously());
+    }
+
+    // Set the weights for each scene, this can be expanded for more scenes
+    void SetSceneWeights()
+    {
+        // Can add more scenes later
+        sceneSpawnWeights["FirstLevel"] = spawnOptions;
+        sceneSpawnWeights["SecondLevel"] = spawnOptions;
+        sceneSpawnWeights["ThirdLevel"] = spawnOptions;
+        sceneSpawnWeights["FourthLevel"] = spawnOptions;
+    }
+
+    // Coroutine to spawn objects continuously at a fixed interval (temporary)
+    private IEnumerator<WaitForSeconds> SpawnObjectContinuously()
+    {
+        while (true)
+        {
+            SpawnObject();
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+
+    // Spawn an object based on weighted chances for the current scene
+    public void SpawnObject()
+    {
+        // Get the current scene name
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        // If no weights are found for the current scene, return early
+        if (!sceneSpawnWeights.ContainsKey(currentScene))
+        {
+            Debug.LogWarning("No spawn weights set for this scene.");
+            return;
+        }
+
+        // Get the list of WeightedObjects for the current scene
+        List<WeightedObject> currentSceneWeights = sceneSpawnWeights[currentScene];
+
+        // Calculate the total weight
+        int totalWeight = 0;
+        foreach (var weightedObject in currentSceneWeights)
+        {
+            totalWeight += weightedObject.weight;
+        }
+
+        // If the total weight is 0, don't spawn anything
+        if (totalWeight == 0)
+        {
+            Debug.Log("No objects available to spawn in this scene.");
+            return;
+        }
+
+        // Pick a random value between 0 and the total weight
+        int randomValue = UnityEngine.Random.Range(0, totalWeight);
+
+        // Select the object based on the random value and weighted chances
+        int cumulativeWeight = 0;
+        foreach (var weightedObject in currentSceneWeights)
+        {
+            cumulativeWeight += weightedObject.weight;
+
+            if (randomValue < cumulativeWeight)
+            {
+                // Get a random X coordinate within the scene bounds
+                float randomX = UnityEngine.Random.Range(minX, maxX);
+
+                // Spawn the selected object at a random X position
+                Instantiate(weightedObject.prefabToSpawn, new Vector2(randomX, 9), Quaternion.identity);
+                break;
+            }
+        }
+    }
+
     
 
-    private void Awake()
-    {
-        
-       
-    }
-    
-    public int randomIndex;
-    public int scene;
-    public float spawnInterval = 2f; 
-    public float spawnDelay = 0f; 
-    int total = 0;
-    public Vector2 spawnAreaMin;
-    public Vector2 spawnAreaMax;
-    public int randomNumber;
-    int randomTimeChosen;
-    [SerializeField] private int randomTimeMin;
-    [SerializeField] private int randomTimeMax;
-    public int totalChance;
-    public int sceneToPrefab;
-    [SerializeField] private int chance_1st;
-    [SerializeField] private int chance_2nd;
-    [SerializeField] private int chance_3rd;
-    [SerializeField] int x, y, z;
-    [SerializeField] GameObject a, b, c;
-    public void Start()
-    {
-        scene = SceneManager.GetActiveScene().buildIndex;
-        randomTimeChosen = UnityEngine.Random.Range(randomTimeMin, randomTimeMax);
-        InvokeRepeating("SpawnRandomPrefab",8f, 6f);
-        Invoke("StartScript", 0.2f);
-        Invoke("Orderer",0.3f);
-
-        
-        
-    }
-    async Task StartScript()
-    {
-        await Task.Delay(100);
-        if (scene == 1)
-        {
-            sceneToPrefab = 0;
-        }
-        else if (scene == 4)
-        {
-            sceneToPrefab = 1;
-        }
-        else if (scene == 5)
-        {
-            sceneToPrefab = 2;
-        }
-        else if (scene == 6)
-        {
-            sceneToPrefab = 3;
-        }
-        else
-        {
-            Debug.LogWarning("No scene matched for prefab spawning.");
-        }
-
-        x = anchors[sceneToPrefab].chancePoint;
-        y = radioactiveWastes[sceneToPrefab].chancePoint;
-        z = bottles[sceneToPrefab].chancePoint;
-
-        a = anchors[sceneToPrefab].prefab;
-        b = radioactiveWastes[sceneToPrefab].prefab;
-        c = bottles[sceneToPrefab].prefab;
-        if (x == 0)
-        {
-            chance_3rd = 0;
-            Debug.Log("Anchor prefab chance point is 0.");
-        }
-
-
-        if (y == 0)
-        {
-            chance_3rd = 0;
-            Debug.Log("Radioactive Waste prefab chance point is 0.");
-        }
-        if (z == 0)
-        {
-            chance_3rd = 0;
-            Debug.Log("Bottle prefab chance point is 0.");
-        }
-    }
-    async Task Orderer()
-    {
-        await Task.Delay(300);
-        if ((x > y) && (y > z))
-        {
-            chance_1st = x;
-            prefab1 = a;
-
-            chance_2nd = y;
-            prefab2 = b;
-
-            chance_3rd = z;
-            prefab3 = c;
-
-        }
-        else if ((x > z) && (z > y))
-        {
-            chance_1st = x;
-            prefab1 = a;
-            chance_2nd = z;
-            prefab2 = c;
-            chance_3rd = y;
-            prefab3 = b;
-            Debug.Log("Chances (from highest to lowest): " + prefab1 + ", " + prefab2 + ", " + prefab3);
-        }
-        else if ((y > x) && (x > z))
-        {
-            chance_1st = y;
-            prefab1 = b;
-            chance_2nd = x;
-            prefab2 = a;
-            chance_3rd = z;
-            prefab3 = c;
-            Debug.Log("Chances (from highest to lowest): " + prefab1 + ", " + prefab2 + ", " + prefab3);
-        }
-        else if ((y > z) && (z > x))
-        {
-            chance_1st = y;
-            prefab1 = b;
-            chance_2nd = z;
-            prefab2 = c;
-            chance_3rd = x;
-            prefab3 = a;
-            Debug.Log("Chances (from highest to lowest): " + prefab1 + ", " + prefab2 + ", " + prefab3);
-        }
-        else if ((z > x) && (x > y))
-        {
-            chance_1st = z;
-            prefab1 = c;
-            chance_2nd = x;
-            prefab2 = a;
-            chance_3rd = y;
-            prefab3 = b;
-        }
-        else if ((z > y) && (y > x))
-        {
-            chance_1st = z;
-            prefab1 = c;
-            chance_2nd = y;
-            prefab2 = c;
-            chance_3rd = x;
-            prefab3 = a;
-        }
-    }
-
-    async Task SpawnRandomPrefab()
-    {
-        await Task.Delay(0);
-        total += 1;
-
-        Debug.Log($"SpawnRandomPrefab called " + total + " times.");
-        
-
-        // escolher prefab aleatória
-        randomIndex = UnityEngine.Random.Range(1, 100);
-        
-        float randomY = UnityEngine.Random.Range(spawnAreaMin.y, spawnAreaMax.y);
-        // gerar posicao aleatória
-        float randomX = UnityEngine.Random.Range(spawnAreaMin.x, spawnAreaMax.x);
-        Vector3 spawnPosition = new Vector3(randomX, randomY, 0f); // z é 0
-        
-        if (chance_3rd != 0)
-        {
-            if (randomIndex > chance_1st)
-            {
-                
-                GameObject chosenPrefab = prefab1;
-                Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-                Debug.Log("Common rarity trash spawned");
-            }
-            else if ((randomIndex <= chance_1st) && (randomIndex > chance_2nd))
-            {
-                
-                GameObject chosenPrefab = prefab2;
-                Debug.Log("Rare rarity trash spawned");
-                Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-            }
-            else if (randomIndex <= chance_2nd)
-            {
-                
-                GameObject chosenPrefab = prefab3;
-                Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-                Debug.Log("Extreme rarity trash spawned");
-            }
-        }
-        else if (chance_3rd == 0) 
-        {
-            if (randomIndex > chance_1st)
-            {
-
-                GameObject chosenPrefab = prefab1;
-                Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-                Debug.Log("Common rarity trash spawned");
-            }
-            else if (randomIndex <= chance_1st)
-            {
-
-                GameObject chosenPrefab = prefab2;
-                Debug.Log("Rare rarity trash spawned");
-                Instantiate(chosenPrefab, spawnPosition, Quaternion.identity);
-            }
-
-
-        }
-        
-        
-
-        // instanciar prefab
-
-    }
-    
-    
 }
+    
+    
+
 
