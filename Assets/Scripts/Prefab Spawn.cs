@@ -61,8 +61,16 @@ public class PrefabSpawn : MonoBehaviour
         
         // Start the spawn coroutine to spawn objects continuously (temporarily for testing)
         StartCoroutine(SpawnObjectContinuously());
+        
     }
-    
+    [SerializeField] private float _duration = 1f;
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        
+
+    }
     async Task StageTimer()
     {
         await Task.Delay(500);
@@ -90,9 +98,9 @@ public class PrefabSpawn : MonoBehaviour
             Task4 = false;
             Task5 = true;
         }
-            
-       
-        
+
+
+
     }
     // Set the weights for each scene, this can be expanded for more scenes
     void SetSceneWeights()
@@ -113,15 +121,7 @@ public class PrefabSpawn : MonoBehaviour
             yield return new WaitForSeconds(spawnInterval);
         }
     }
-    IEnumerator Countdown(int seconds)
-    {
-        timer = seconds;
-        while (timer > 0)
-        {
-            yield return new WaitForSeconds(1);
-            timer++;
-        }
-    }
+    
     // Spawn an object based on weighted chances for the current scene
     public void SpawnObject()
     {
