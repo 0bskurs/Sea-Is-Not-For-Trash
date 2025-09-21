@@ -17,6 +17,8 @@ public class PrefabSpawn : MonoBehaviour
     // Scene 4 : Level 2
     // Scene 5 : Level 3
     // Scene 6 : Level 4
+    [SerializeField] private List<int> amountSpawned;
+    [SerializeField] private int currentAmountSpawned;
     public int countTaskStages;
     [System.Serializable]
     public class WeightedObject
@@ -54,17 +56,17 @@ public class PrefabSpawn : MonoBehaviour
     // Start method to initiate the spawning process
     void Start()
     {
+        currentAmountSpawned = amountSpawned[0];
         spawnInterval = spawnStart;
         InvokeRepeating("StageTimer", 5, 0.2f);
         // Set up the spawn weights for each scene (using default values for now)
         SetSceneWeights();
         
-        // Start the spawn coroutine to spawn objects continuously (temporarily for testing)
         StartCoroutine(SpawnObjectContinuously());
         
     }
     [SerializeField] private float _duration = 1f;
-
+    
     private void Update()
     {
         timer += Time.deltaTime;
@@ -91,6 +93,7 @@ public class PrefabSpawn : MonoBehaviour
             spawnInterval -= stages[2].minusSpawnTime;
             Task3 = false;
             Task4 = true;
+            currentAmountSpawned = amountSpawned[1];
         }
         else if (stages[4].stageStartTime < timer && Task4 == true)
         {
@@ -115,13 +118,24 @@ public class PrefabSpawn : MonoBehaviour
     // Coroutine to spawn objects continuously at a fixed interval (temporary)
     private IEnumerator<WaitForSeconds> SpawnObjectContinuously()
     {
-        while (true)
+        while (true && currentAmountSpawned < 3)
         {
+            SpawnObject();
+            yield return new WaitForSeconds(0.15f);
+            SpawnObject();
+            yield return new WaitForSeconds(spawnInterval);
+        }
+        while (true && currentAmountSpawned >= 3 && currentAmountSpawned < 4)
+        {
+            SpawnObject();
+            yield return new WaitForSeconds(0.15f);
+            SpawnObject();
+            yield return new WaitForSeconds(0.15f);
             SpawnObject();
             yield return new WaitForSeconds(spawnInterval);
         }
     }
-    
+
     // Spawn an object based on weighted chances for the current scene
     public void SpawnObject()
     {

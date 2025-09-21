@@ -506,6 +506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a97fde5947b1154c8ae96444f38467e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amountSpawned: 0200000003000000
+  currentAmountSpawned: 0
   countTaskStages: 0
   stages:
   - name: Stage 0
@@ -525,16 +527,16 @@ MonoBehaviour:
     minusSpawnTime: 0.75
   spawnOptions:
   - prefabToSpawn: {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
-    weight: 20
+    weight: 30
   - prefabToSpawn: {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
-    weight: 15
-  - prefabToSpawn: {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
     weight: 60
+  - prefabToSpawn: {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
+    weight: 10
   spawnInterval: 2
   minX: -10
   maxX: 15
   timer: 0
-  spawnStart: 9
+  spawnStart: 6
   Task1: 1
   Task2: 0
   Task3: 0
