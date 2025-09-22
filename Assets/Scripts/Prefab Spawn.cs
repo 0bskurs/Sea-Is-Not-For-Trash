@@ -121,16 +121,16 @@ public class PrefabSpawn : MonoBehaviour
         while (true && currentAmountSpawned < 3)
         {
             SpawnObject();
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.05f);
             SpawnObject();
             yield return new WaitForSeconds(spawnInterval);
         }
         while (true && currentAmountSpawned >= 3 && currentAmountSpawned < 4)
         {
             SpawnObject();
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.05f);
             SpawnObject();
-            yield return new WaitForSeconds(0.15f);
+            yield return new WaitForSeconds(0.05f);
             SpawnObject();
             yield return new WaitForSeconds(spawnInterval);
         }
