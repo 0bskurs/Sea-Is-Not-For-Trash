@@ -32,7 +32,7 @@ public class LixoComputadorSpawn : MonoBehaviour
 
         setSpawnStart = UnityEngine.Random.Range(minimumSpawnDelay, maximumSpawnDelay);
         
-        InvokeRepeating("SpawnSpecificPrefab",setSpawnStart, 1000000000000000000f);
+        InvokeRepeating("SpawnSpecificPrefab",setSpawnStart, 12f);
     }
 
     async Task SpawnSpecificPrefab()

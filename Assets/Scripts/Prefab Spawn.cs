@@ -29,6 +29,7 @@ public class PrefabSpawn : MonoBehaviour
     [System.Serializable]
     public class Stages
     {
+        public bool _tasks;
         public string name;          // Stage Name
         public float stageStartTime; // Time when the stage starts
         public float minusSpawnTime; // Time cooldown decrease for spawning prefabs
@@ -47,6 +48,7 @@ public class PrefabSpawn : MonoBehaviour
     public float maxX = 8f;
     public float timer;
     public float spawnStart;
+    
     public bool Task1 = true;
     public bool Task2 = false;
     public bool Task3 = false;
@@ -66,41 +68,64 @@ public class PrefabSpawn : MonoBehaviour
         
     }
     [SerializeField] private float _duration = 1f;
-    
+
+    [Header("True or False for Stages")][SerializeField] private List<bool> _tasks;
     private void Update()
     {
         timer += Time.deltaTime;
         
 
     }
+    [SerializeField] private int y = 1;
     async Task StageTimer()
     {
-        await Task.Delay(500);
-        if (stages[1].stageStartTime < timer && Task1 == true)
+        
+        while (y < stages.Count)
         {
-            spawnInterval -= stages[1].minusSpawnTime;
-            Task1 = false;
-            Task2 = true;
+            await Task.Delay(500);
+            if (stages[y].stageStartTime < timer && stages[y - 1]._tasks == true)
+            {
+                spawnInterval -= stages[y].minusSpawnTime;
+                stages[y - 1]._tasks = false;
+                stages[y]._tasks = true;
+                y++;
+            }
         }
-        else if (stages[2].stageStartTime < timer && Task2 == true)
-        {
-            spawnInterval -= stages[2].minusSpawnTime;
-            Task2 = false;
-            Task3 = true;
-        }
-        else if (stages[3].stageStartTime < timer && Task3 == true)
-        {
-            spawnInterval -= stages[2].minusSpawnTime;
-            Task3 = false;
-            Task4 = true;
-            currentAmountSpawned = amountSpawned[1];
-        }
-        else if (stages[4].stageStartTime < timer && Task4 == true)
-        {
-            spawnInterval -= stages[3].minusSpawnTime;
-            Task4 = false;
-            Task5 = true;
-        }
+
+        //if (stages[1].stageStartTime < timer && stages[0]._tasks == true)
+        //{
+        //    spawnInterval -= stages[1].minusSpawnTime;
+        //    stages[0]._tasks = false;
+        //    stages[1]._tasks = true;
+
+        //}
+        //else if (stages[2].stageStartTime < timer && stages[1]._tasks == true)
+        //{
+        //    spawnInterval -= stages[2].minusSpawnTime;
+        //    stages[1]._tasks = false;
+        //    stages[2]._tasks = true;
+        //}
+        //else if (stages[3].stageStartTime < timer && stages[2]._tasks == true)
+        //{
+        //    spawnInterval -= stages[3].minusSpawnTime;
+        //    stages[2]._tasks = false;
+        //    stages[3]._tasks = true;
+        //    currentAmountSpawned = amountSpawned[1];
+        //}
+        //else if (stages[4].stageStartTime < timer && stages[3]._tasks == true)
+        //{
+        //    spawnInterval -= stages[4].minusSpawnTime;
+        //    stages[3]._tasks = false;
+        //    stages[4]._tasks = true;
+            
+        //}
+        //else if (stages[5].stageStartTime < timer && stages[4]._tasks == true)
+        //{
+        //    spawnInterval -= stages[5].minusSpawnTime;
+        //    stages[4]._tasks = false;
+        //    stages[5]._tasks = true;
+        //    currentAmountSpawned = amountSpawned[2];
+        //}
 
 
 
@@ -118,20 +143,13 @@ public class PrefabSpawn : MonoBehaviour
     // Coroutine to spawn objects continuously at a fixed interval (temporary)
     private IEnumerator<WaitForSeconds> SpawnObjectContinuously()
     {
-        while (true && currentAmountSpawned < 3)
+        while (true)
         {
-            SpawnObject();
-            yield return new WaitForSeconds(0.05f);
-            SpawnObject();
-            yield return new WaitForSeconds(spawnInterval);
-        }
-        while (true && currentAmountSpawned >= 3 && currentAmountSpawned < 4)
-        {
-            SpawnObject();
-            yield return new WaitForSeconds(0.05f);
-            SpawnObject();
-            yield return new WaitForSeconds(0.05f);
-            SpawnObject();
+            for (int i = 0; i < currentAmountSpawned; i++)
+            {
+                SpawnObject();
+                yield return new WaitForSeconds(0.2f);
+            }
             yield return new WaitForSeconds(spawnInterval);
         }
     }
