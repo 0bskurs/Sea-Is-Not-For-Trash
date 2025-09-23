@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Unity.Burst.Intrinsics;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -20,6 +19,7 @@ public class PrefabSpawn : MonoBehaviour
     // Scene 6 : Level 4
     [SerializeField] private List<int> amountSpawned;
     [SerializeField] private float currentAmountSpawned;
+    [SerializeField] private int variableSpawnTime = 1;
     public int countTaskStages;
     [System.Serializable]
     public class WeightedObject
@@ -30,8 +30,9 @@ public class PrefabSpawn : MonoBehaviour
     [System.Serializable]
     public class Stages
     {
-        public bool _tasks;
-        public string name;          // Stage Name
+        
+        public string name; // Stage Name
+        public bool _tasks; // True or False verifier for next task on Class
         public float stageStartTime; // Time when the stage starts
         public float minusSpawnTime; // Time cooldown decrease for spawning prefabs
     }
@@ -60,7 +61,7 @@ public class PrefabSpawn : MonoBehaviour
         SetSceneWeights();
         
         StartCoroutine(SpawnObjectContinuously());
-        
+        StartCoroutine(VariableTimeRepeat());
     }
     [SerializeField] private float _duration = 1f;
 
@@ -68,8 +69,16 @@ public class PrefabSpawn : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        timeUntilSpawn = spawnInterval / (currentAmountSpawned);
 
+    }
+    private IEnumerator<WaitForSeconds> VariableTimeRepeat()
+    {
+        while (true)
+        {
+            timeUntilSpawn = (spawnInterval/ (currentAmountSpawned));
+            yield return new WaitForSeconds(5f);
+
+        }
     }
     [SerializeField] private int y = 1;
     async Task StageTimer()

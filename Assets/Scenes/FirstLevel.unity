@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -375,6 +376,18 @@ Transform:
   - {fileID: 669208505}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8437c815c7545fa4bae483e5c410c332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,43 +519,112 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a97fde5947b1154c8ae96444f38467e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountSpawned: 020000000200000003000000030000000400000004000000
+  amountSpawned: 02000000000000000000000003000000000000000000000004000000000000000000000005000000000000000000000006000000000000000000000007000000000000000000000008000000000000000000000009000000
   currentAmountSpawned: 0
+  variableSpawnTime: 1
   countTaskStages: 0
   stages:
-  - _tasks: 1
-    name: Stage 0
+  - name: Stage 0
+    _tasks: 1
     stageStartTime: 0
     minusSpawnTime: 0
-  - _tasks: 0
-    name: Stage 1
+  - name: Stage 1
+    _tasks: 0
+    stageStartTime: 7
+    minusSpawnTime: 0.2
+  - name: Stage 2
+    _tasks: 0
     stageStartTime: 15
-    minusSpawnTime: 1.5
-  - _tasks: 0
-    name: Stage 2
+    minusSpawnTime: 0.2
+  - name: Stage 3
+    _tasks: 0
+    stageStartTime: 22
+    minusSpawnTime: 0.4
+  - name: Stage 4
+    _tasks: 0
     stageStartTime: 30
-    minusSpawnTime: 1.25
-  - _tasks: 0
-    name: Stage 3
+    minusSpawnTime: 0.4
+  - name: Stage 5
+    _tasks: 0
+    stageStartTime: 37
+    minusSpawnTime: 0.6
+  - name: Stage 6
+    _tasks: 0
     stageStartTime: 45
-    minusSpawnTime: 1
-  - _tasks: 0
-    name: Stage 4
+    minusSpawnTime: 0.6
+  - name: Stage 7
+    _tasks: 0
+    stageStartTime: 52
+    minusSpawnTime: 0.8
+  - name: Stage 8
+    _tasks: 0
     stageStartTime: 60
-    minusSpawnTime: 0.75
+    minusSpawnTime: 0.8
+  - name: Stage 9
+    _tasks: 0
+    stageStartTime: 67
+    minusSpawnTime: 1
+  - name: Stage 10
+    _tasks: 0
+    stageStartTime: 75
+    minusSpawnTime: 1
+  - name: Stage 11
+    _tasks: 0
+    stageStartTime: 82
+    minusSpawnTime: 1
+  - name: Stage 12
+    _tasks: 0
+    stageStartTime: 90
+    minusSpawnTime: 0.8
+  - name: Stage 13
+    _tasks: 0
+    stageStartTime: 97
+    minusSpawnTime: 0.8
+  - name: Stage 14
+    _tasks: 0
+    stageStartTime: 105
+    minusSpawnTime: 0.8
+  - name: Stage 15
+    _tasks: 0
+    stageStartTime: 112
+    minusSpawnTime: 0.6
+  - name: Stage 16
+    _tasks: 0
+    stageStartTime: 120
+    minusSpawnTime: 0.6
+  - name: Stage 17
+    _tasks: 0
+    stageStartTime: 127
+    minusSpawnTime: 0.6
+  - name: Stage 18
+    _tasks: 0
+    stageStartTime: 135
+    minusSpawnTime: 0.6
+  - name: Stage 19
+    _tasks: 0
+    stageStartTime: 142
+    minusSpawnTime: 0.6
+  - name: Stage 20
+    _tasks: 0
+    stageStartTime: 150
+    minusSpawnTime: 0.4
+  - name: Stage 21
+    _tasks: 0
+    stageStartTime: 157
+    minusSpawnTime: 0.4
   spawnOptions:
   - prefabToSpawn: {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
-    weight: 30
+    weight: 8
   - prefabToSpawn: {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
-    weight: 60
+    weight: 88
   - prefabToSpawn: {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
-    weight: 10
+    weight: 4
   spawnInterval: 2
-  startAmountSpawned: 6
-  minX: -15
-  maxX: 15
+  startAmountSpawned: 10
+  minX: -12
+  maxX: 12
   timer: 0
-  spawnStart: 14
+  spawnStart: 20
   timeUntilSpawn: 0
   _duration: 1
   _tasks: 
@@ -567,14 +649,14 @@ MonoBehaviour:
   spawnAreaMin: {x: -10, y: 9}
   spawnAreaMax: {x: 15, y: 9}
   specificPrefab: 0
-  minimumSpawnDelay: 50
-  maximumSpawnDelay: 75
-  setSpawnDelay: 0
+  minimumSpawnDelay: 120
+  maximumSpawnDelay: 150
   randomTimeChosen: 0
   scene: 0
-  randomTimeMin: 3
-  randomTimeMax: 9
+  randomTimeMin: 15
+  randomTimeMax: 27
   setSpawnStart: 0
+  index: 0
 --- !u!1 &659117242
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +882,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767362504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1598,7 +1680,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654892038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1694,116 +1776,6 @@ Transform:
   - {fileID: 1314812914}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1762992653
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762992654}
-  - component: {fileID: 1762992656}
-  - component: {fileID: 1762992655}
-  m_Layer: 6
-  m_Name: 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1762992654
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762992653}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.340969, y: -5.18, z: 0}
-  m_LocalScale: {x: 4.893811, y: 4.893811, z: 4.893811}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1762992655
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762992653}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 01f01cd4d85d1144fad94a6d14a28c74, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!212 &1762992656
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762992653}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1850650446
 GameObject:
   m_ObjectHideFlags: 0
@@ -2117,7 +2089,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0047985762, y: 0.0029991241}
+  m_Offset: {x: -0.004798579, y: -0.0017826054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2127,7 +2099,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.084212035, y: 0.055008844}
+  m_Size: {x: 0.06235268, y: 0.045445386}
   m_EdgeRadius: 0
 --- !u!114 &1880784468
 MonoBehaviour:
@@ -2216,6 +2188,22 @@ MonoBehaviour:
         m_CallState: 1
     m_ActionId: 8036dc21-01ba-4859-a228-d23333e5e946
     m_ActionName: 'Movimento/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Pausa, Assembly-CSharp
+        m_MethodName: CallPauseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ef6757d8-acd7-4e92-a9db-ab73a5dbe3a8
+    m_ActionName: 'Movimento/Pause[/Keyboard/p,/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movimento
@@ -2317,7 +2305,7 @@ Canvas:
   m_GameObject: {fileID: 1984656867}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2326,10 +2314,10 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1984656871
 RectTransform:
@@ -2447,7 +2435,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1880784462}
-  - {fileID: 1762992654}
   - {fileID: 1509572857}
   - {fileID: 1984656871}
   - {fileID: 916642510}

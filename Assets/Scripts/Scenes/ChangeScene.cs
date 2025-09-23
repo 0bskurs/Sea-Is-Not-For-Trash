@@ -16,6 +16,16 @@ public class ChangeScene : MonoBehaviour
     {
         Application.Quit();
     }
-    
 
+    public void PauseMenu()
+    {
+        Time.timeScale = 0;
+        SceneManager.LoadScene(7);
+    }
+    public void Unpause()
+    {
+        Time.timeScale = 1;
+        SceneManager.UnloadSceneAsync(7);
+        SceneManager.LoadSceneAsync(1);
+    }
 }

@@ -8,6 +8,7 @@ TagManager:
   - Trash
   - Wall
   - Parar
+  - Pausa
   layers:
   - Default
   - TransparentFX
