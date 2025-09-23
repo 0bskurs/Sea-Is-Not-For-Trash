@@ -8,11 +8,13 @@ public class Esquiva : MonoBehaviour
 {
     private Vector2 playerPosition;
     [SerializeField] GameObject player;
+    [SerializeField] GameObject tintaSprite;
     [SerializeField] private InputAction PlayerController;
     [SerializeField] public InputActionReference inputActionReference;
     [SerializeField] private bool isOnCooldown = false;
     [SerializeField] private int cooldownTime = 15;
     [SerializeField] private int invincibilityTime = 3;
+    [SerializeField] Animator tintaAnimator;
 
     private bool keyPressed;
     private void Start()
@@ -25,21 +27,30 @@ public class Esquiva : MonoBehaviour
     }
     private async Task DisableCollisionTemp()
     {
+        
         isOnCooldown = true;
         Physics2D.IgnoreLayerCollision(6, 7, true);
         await Task.Delay(invincibilityTime * 1000);
         Physics2D.IgnoreLayerCollision(6, 7, false);
+        
         await Task.Delay(cooldownTime * 1000);
         isOnCooldown = false;
     }
-    
+    private async Task EnableDisableSprite()
+    {
+        Vector3 player_position = player.transform.position;
+        Instantiate(tintaSprite, player_position, Quaternion.identity);
+        await Task.Delay(3500);
+        DestroyImmediate(tintaSprite, true);
+    }
+
     public void OnToggleCollision2D(InputAction.CallbackContext context)
     {
         
         if (context.performed && !isOnCooldown==true)
         {
             Invoke(nameof(DisableCollisionTemp), 0);
-
+            Invoke(nameof(EnableDisableSprite), 0);
         }
     }
 

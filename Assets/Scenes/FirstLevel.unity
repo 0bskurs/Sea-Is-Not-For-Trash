@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a97fde5947b1154c8ae96444f38467e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountSpawned: 0f0000000600000007000000
+  amountSpawned: 020000000200000003000000030000000400000004000000
   currentAmountSpawned: 0
   countTaskStages: 0
   stages:
@@ -532,22 +532,18 @@ MonoBehaviour:
     minusSpawnTime: 0.75
   spawnOptions:
   - prefabToSpawn: {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
-    weight: 0
+    weight: 30
   - prefabToSpawn: {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
     weight: 60
   - prefabToSpawn: {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
-    weight: 0
+    weight: 10
   spawnInterval: 2
-  minX: -10
+  startAmountSpawned: 6
+  minX: -15
   maxX: 15
   timer: 0
-  spawnStart: 5
-  Task1: 1
-  Task2: 0
-  Task3: 0
-  Task4: 0
-  Task5: 0
-  Task6: 0
+  spawnStart: 14
+  timeUntilSpawn: 0
   _duration: 1
   _tasks: 
   y: 1
@@ -1986,7 +1982,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 3358743462005232401, guid: d4c08adf44a5f11498455d339bb5277a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2238,6 +2234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1880784460}
+  tintaSprite: {fileID: 6575076048789938055, guid: ffab8697d5bacd94392c9795cfd54ada, type: 3}
   PlayerController:
     m_Name: Player Controller
     m_Type: 0
@@ -2251,6 +2248,7 @@ MonoBehaviour:
   isOnCooldown: 0
   cooldownTime: 15
   invincibilityTime: 5
+  tintaAnimator: {fileID: 0}
 --- !u!1 &1984656867
 GameObject:
   m_ObjectHideFlags: 0

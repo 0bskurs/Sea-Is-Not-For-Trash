@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Unity.Burst.Intrinsics;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,7 +19,7 @@ public class PrefabSpawn : MonoBehaviour
     // Scene 5 : Level 3
     // Scene 6 : Level 4
     [SerializeField] private List<int> amountSpawned;
-    [SerializeField] private int currentAmountSpawned;
+    [SerializeField] private float currentAmountSpawned;
     public int countTaskStages;
     [System.Serializable]
     public class WeightedObject
@@ -42,23 +43,17 @@ public class PrefabSpawn : MonoBehaviour
 
     // Spawn interval in seconds
     public float spawnInterval;
-
+    [SerializeField] private float startAmountSpawned;
     // Spawn area (min/max x values)
     public float minX = -8f;
     public float maxX = 8f;
     public float timer;
     public float spawnStart;
-    
-    public bool Task1 = true;
-    public bool Task2 = false;
-    public bool Task3 = false;
-    public bool Task4 = false;
-    public bool Task5 = false;
-    public bool Task6 = false;
+    [SerializeField] private float timeUntilSpawn;
     // Start method to initiate the spawning process
     void Start()
     {
-        currentAmountSpawned = amountSpawned[0];
+        currentAmountSpawned = startAmountSpawned;
         spawnInterval = spawnStart;
         InvokeRepeating("StageTimer", 5, 0.2f);
         // Set up the spawn weights for each scene (using default values for now)
@@ -73,7 +68,7 @@ public class PrefabSpawn : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        
+        timeUntilSpawn = spawnInterval / (currentAmountSpawned);
 
     }
     [SerializeField] private int y = 1;
@@ -85,6 +80,7 @@ public class PrefabSpawn : MonoBehaviour
             await Task.Delay(500);
             if (stages[y].stageStartTime < timer && stages[y - 1]._tasks == true)
             {
+                currentAmountSpawned += amountSpawned[y];
                 spawnInterval -= stages[y].minusSpawnTime;
                 stages[y - 1]._tasks = false;
                 stages[y]._tasks = true;
@@ -148,9 +144,9 @@ public class PrefabSpawn : MonoBehaviour
             for (int i = 0; i < currentAmountSpawned; i++)
             {
                 SpawnObject();
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(timeUntilSpawn);
             }
-            yield return new WaitForSeconds(spawnInterval);
+            
         }
     }
 
