@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pausa.unity
     guid: e43d00c61dff23c4cb185d276d795f6f
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 16ad87ee1c5c8874f8e60838f506dce8
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2cf9ae33ecd8fde42a38358d70c6dcd2, type: 3}
   m_UseUCBPForAssetBundles: 0
