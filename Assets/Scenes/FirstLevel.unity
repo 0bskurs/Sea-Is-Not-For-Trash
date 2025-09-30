@@ -868,6 +868,82 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: presets_.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: presets_.Array.data[0].preset
+      value: test
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[0].objectName
+      value: Garrafa
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[1].objectName
+      value: Ancora
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[2].objectName
+      value: Radiativo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[1].objectNumber
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[2].objectNumber
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[0].prefabVariant
+      value: 
+      objectReference: {fileID: 3918738766031243474, guid: 802e2dd3e5756344790ec3b619781a27, type: 3}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[1].prefabVariant
+      value: 
+      objectReference: {fileID: 5507364790310168395, guid: 31c802f1422adca4b9b4b006c4c00cbf, type: 3}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: prefabVariations.Array.data[2].prefabVariant
+      value: 
+      objectReference: {fileID: 7040086764765460682, guid: 9f764a682a24b614a8389e79cb2c4155, type: 3}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: presets_.Array.data[0].hasGameObject.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: presets_.Array.data[0].whichGameObject.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: 'presets_.Array.data[0].hasGameObject.Array.data[0]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: 'presets_.Array.data[0].hasGameObject.Array.data[2]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: 'presets_.Array.data[0].hasGameObject.Array.data[4]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: 'presets_.Array.data[0].hasGameObject.Array.data[6]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: 'presets_.Array.data[0].hasGameObject.Array.data[8]'
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192765336073372238, guid: 86d3e5969b7d84c4094176ced92f04ac, type: 3}
+      propertyPath: 'presets_.Array.data[0].hasGameObject.Array.data[10]'
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
