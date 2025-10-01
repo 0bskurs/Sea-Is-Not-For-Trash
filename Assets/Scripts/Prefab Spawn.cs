@@ -8,9 +8,17 @@ using System.Threading.Tasks;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System.Linq;
 public class PrefabSpawnNew : MonoBehaviour
 {
+    [System.Serializable]
+    public class SpawnLocations
+    {
+        public string number;
+        public Vector2 spawnLocation;
+        public GameObject spawnLocationIndicator;
+    }
+
     [System.Serializable]
     public class Presets
     {
@@ -29,6 +37,9 @@ public class PrefabSpawnNew : MonoBehaviour
     }
     public List<Presets> presets_;
     public List<PrefabVariation> prefabVariations;
+    public List<SpawnLocations> spawnLocations_;
+    
+    
 
     public void Start()
     {
@@ -40,15 +51,41 @@ public class PrefabSpawnNew : MonoBehaviour
             }
             else
             {
-                Debug.Log($"{i} "+"IsFalse!");
+                Debug.Log($"{i} " + "IsFalse!");
+            }
+        }
+        SpawnLocation();
+        Spawn();
+    }
+    
+    public void SpawnLocation()
+    {
+        for (int i = 0; i < spawnLocations_.Count; i++)
+        {
+            Instantiate(spawnLocations_[i].spawnLocationIndicator, spawnLocations_[i].spawnLocation, Quaternion.identity);
+        }
+    }
+
+    public void Spawn()
+    {
+        for (int i = 0; i < presets_.Count; i++)
+        {
+            for (int j = 0; j < presets_[i].hasGameObject.Count; j++)
+            {
+                if (presets_[i].hasGameObject[j] == true)
+                {
+                    int x = presets_[i].whichGameObject[j];
+                    Console.WriteLine("Spawned!!");
+                    Instantiate(prefabVariations[x].prefabVariant, spawnLocations_[j].spawnLocation, Quaternion.identity);
+                }
             }
         }
     }
-    // 1 : Garrafa
+    // 0 : Garrafa
+    // 1 : Ancora 
     // 2 : Radioativo
-    // 3
 }
-    
-    
+
+
 
 
