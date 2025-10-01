@@ -38,7 +38,7 @@ public class PrefabSpawnNew : MonoBehaviour
     public List<Presets> presets_;
     public List<PrefabVariation> prefabVariations;
     public List<SpawnLocations> spawnLocations_;
-    
+    [SerializeField] private float timer = 0;
     
 
     public void Start()
@@ -65,7 +65,11 @@ public class PrefabSpawnNew : MonoBehaviour
             Instantiate(spawnLocations_[i].spawnLocationIndicator, spawnLocations_[i].spawnLocation, Quaternion.identity);
         }
     }
+    private void Update()
+    {
+        timer += Time.deltaTime;
 
+    }
     public void Spawn()
     {
         for (int i = 0; i < presets_.Count; i++)
