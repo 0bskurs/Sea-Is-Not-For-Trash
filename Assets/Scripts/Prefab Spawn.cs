@@ -39,10 +39,11 @@ public class PrefabSpawnNew : MonoBehaviour
     public List<PrefabVariation> prefabVariations;
     public List<SpawnLocations> spawnLocations_;
     [SerializeField] private float timer = 0;
-    [SerializeField] private List<int> orderPreset;
+    
 
     public void Start()
     {
+       
         for (int i = 0; i < presets_[0].hasGameObject.Count; i++)
         {
             if (presets_[0].hasGameObject[i] == true)
@@ -72,20 +73,15 @@ public class PrefabSpawnNew : MonoBehaviour
     }
     public void Spawn()
     {
-        
-    }
-    private async Task SpawnPresets()
-    {
-        
-        for (int i = 0; i < orderPreset.Count; i++)
+        for (int i = 0; i < presets_.Count; i++)
         {
-            for (int j = 0; j < presets_[orderPreset[i]].hasGameObject.Count; j++)
+            for (int j = 0; j < presets_[i].hasGameObject.Count; j++)
             {
-                if (presets_[orderPreset[i]].hasGameObject[j] == true)
+                if (presets_[i].hasGameObject[j] == true)
                 {
-                    int y = presets_[orderPreset[i]].whichGameObject[j];
+                    int x = presets_[i].whichGameObject[j];
                     Console.WriteLine("Spawned!!");
-                    Instantiate(prefabVariations[y].prefabVariant, spawnLocations_[j].spawnLocation, Quaternion.identity);
+                    Instantiate(prefabVariations[x].prefabVariant, spawnLocations_[j].spawnLocation, Quaternion.identity);
                 }
             }
         }

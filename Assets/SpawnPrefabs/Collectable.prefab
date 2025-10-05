@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: -875059941900584040}
   - component: {fileID: 7037096701803280707}
   - component: {fileID: -7573307612995473923}
-  - component: {fileID: -325594652360934471}
   m_Layer: 7
   m_Name: Collectable
   m_TagString: Coletavel
@@ -112,19 +111,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.32344365, y: 0.19414583}
   m_EdgeRadius: 0
---- !u!114 &-325594652360934471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7333762542561478329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e62c4a54e0084a449e975e828b1fe85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxTiltAngle: 360
 --- !u!1 &9182339370051959340
 GameObject:
   m_ObjectHideFlags: 0
