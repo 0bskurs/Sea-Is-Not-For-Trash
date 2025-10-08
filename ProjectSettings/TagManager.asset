@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Parar
   - Pausa
+  - Heal
   layers:
   - Default
   - TransparentFX
