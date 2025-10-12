@@ -943,7 +943,8 @@ PrefabInstance:
       propertyPath: getAnimatorVida
       value: 
       objectReference: {fileID: 767362506}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8001813017133528798, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
