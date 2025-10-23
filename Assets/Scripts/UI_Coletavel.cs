@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class UI_Coletavel : MonoBehaviour
 {
     [SerializeField] RawImage rawImage;
+    [SerializeField] RawImage rawImage2;
     [SerializeField] RectTransform rectTransform;
     [SerializeField] GameObject coletavel;
     [SerializeField] ColetaItem coletaItem;
     public bool isCollected;
     private void Start()
     {
+        rawImage2.enabled = true;
         rawImage.enabled = false;
         isCollected = false;
     }
@@ -20,7 +22,7 @@ public class UI_Coletavel : MonoBehaviour
         isCollected = coletaItem.thatObjectCollected;
         if (isCollected == true)
         {
-
+            rawImage2.enabled = false;
             rawImage.enabled = true;
         }
         
