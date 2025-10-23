@@ -1,0 +1,741 @@
+fileFormatVersion: 2
+guid: 8ae69e52471774a4086b23bca767c605
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3940502255109253094
+    second: barra de tinta-Sheet-Sheet(1)_0
+  - first:
+      213: 3200694165688265210
+    second: barra de tinta-Sheet-Sheet(1)_1
+  - first:
+      213: -22837802319714948
+    second: barra de tinta-Sheet-Sheet(1)_2
+  - first:
+      213: 6766890618367424486
+    second: barra de tinta-Sheet-Sheet(1)_3
+  - first:
+      213: 2709696147901581897
+    second: barra de tinta-Sheet-Sheet(1)_4
+  - first:
+      213: 1674841554805556860
+    second: barra de tinta-Sheet-Sheet(1)_5
+  - first:
+      213: 6112700070163991823
+    second: barra de tinta-Sheet-Sheet(1)_6
+  - first:
+      213: -6807225946733096883
+    second: barra de tinta-Sheet-Sheet(1)_7
+  - first:
+      213: -5538849535364353288
+    second: barra de tinta-Sheet-Sheet(1)_8
+  - first:
+      213: -2114274848327570394
+    second: barra de tinta-Sheet-Sheet(1)_9
+  - first:
+      213: -8856334999472999433
+    second: barra de tinta-Sheet-Sheet(1)_10
+  - first:
+      213: -3223966843261291788
+    second: barra de tinta-Sheet-Sheet(1)_11
+  - first:
+      213: -2825191985426233522
+    second: barra de tinta-Sheet-Sheet(1)_12
+  - first:
+      213: -3945710308133030594
+    second: barra de tinta-Sheet-Sheet(1)_13
+  - first:
+      213: -2835171563494326224
+    second: barra de tinta-Sheet-Sheet(1)_14
+  - first:
+      213: -6806719432008909297
+    second: barra de tinta-Sheet-Sheet(1)_15
+  - first:
+      213: -525344934546491077
+    second: barra de tinta-Sheet-Sheet(1)_16
+  - first:
+      213: -6817079588341663757
+    second: barra de tinta-Sheet-Sheet(1)_17
+  - first:
+      213: -596695746583952763
+    second: barra de tinta-Sheet-Sheet(1)_18
+  - first:
+      213: 697246480007458572
+    second: barra de tinta-Sheet-Sheet(1)_19
+  - first:
+      213: 3586241662653579807
+    second: barra de tinta-Sheet-Sheet(1)_20
+  - first:
+      213: -2850053123530110937
+    second: barra de tinta-Sheet-Sheet(1)_21
+  - first:
+      213: 9166867630527415518
+    second: barra de tinta-Sheet-Sheet(1)_22
+  - first:
+      213: 7057736600188354170
+    second: barra de tinta-Sheet-Sheet(1)_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 229
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7a9606ce97fa630800000000000000
+      internalID: 3940502255109253094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 229
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9a38cb2662b6c20800000000000000
+      internalID: 3200694165688265210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 229
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c756849c32ddeaff0800000000000000
+      internalID: -22837802319714948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 197
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7b6b53a23d8ed50800000000000000
+      internalID: 6766890618367424486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 197
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a0be83a46ca9520800000000000000
+      internalID: 2709696147901581897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_5
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 197
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c768f39358b3e3710800000000000000
+      internalID: 1674841554805556860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 165
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d41acc35ca4d450800000000000000
+      internalID: 6112700070163991823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_7
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 165
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40d6235110e781a0800000000000000
+      internalID: -6807225946733096883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_8
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 165
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2354491bd0223b0800000000000000
+      internalID: -5538849535364353288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_9
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 133
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c64e33a3698a2e0800000000000000
+      internalID: -2114274848327570394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 133
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f37d88ad3af71580800000000000000
+      internalID: -8856334999472999433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_11
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 133
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2f5c3cc3b2243d0800000000000000
+      internalID: -3223966843261291788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 101
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4783669bd6eac8d0800000000000000
+      internalID: -2825191985426233522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_13
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 101
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35322941650e39c0800000000000000
+      internalID: -3945710308133030594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 101
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030c1a00c7277a8d0800000000000000
+      internalID: -2835171563494326224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 69
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e3c597dbca981a0800000000000000
+      internalID: -6806719432008909297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_16
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 69
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b393ecfb09995b8f0800000000000000
+      internalID: -525344934546491077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_17
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 69
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7345b9b3ed461a0800000000000000
+      internalID: -6817079588341663757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_18
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 37
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58280e1416c18b7f0800000000000000
+      internalID: -596695746583952763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_19
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 37
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f6cb9bafd1da900800000000000000
+      internalID: 697246480007458572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_20
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 37
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f124c2d9ac3e4c130800000000000000
+      internalID: 3586241662653579807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 5
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728cefcc8c39278d0800000000000000
+      internalID: -2850053123530110937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 5
+        width: 64
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed40d94ba81473f70800000000000000
+      internalID: 9166867630527415518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: barra de tinta-Sheet-Sheet(1)_23
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 5
+        width: 63
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7eff7c5b0e12f160800000000000000
+      internalID: 7057736600188354170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      barra de tinta-Sheet-Sheet(1)_0: 3940502255109253094
+      barra de tinta-Sheet-Sheet(1)_1: 3200694165688265210
+      barra de tinta-Sheet-Sheet(1)_10: -8856334999472999433
+      barra de tinta-Sheet-Sheet(1)_11: -3223966843261291788
+      barra de tinta-Sheet-Sheet(1)_12: -2825191985426233522
+      barra de tinta-Sheet-Sheet(1)_13: -3945710308133030594
+      barra de tinta-Sheet-Sheet(1)_14: -2835171563494326224
+      barra de tinta-Sheet-Sheet(1)_15: -6806719432008909297
+      barra de tinta-Sheet-Sheet(1)_16: -525344934546491077
+      barra de tinta-Sheet-Sheet(1)_17: -6817079588341663757
+      barra de tinta-Sheet-Sheet(1)_18: -596695746583952763
+      barra de tinta-Sheet-Sheet(1)_19: 697246480007458572
+      barra de tinta-Sheet-Sheet(1)_2: -22837802319714948
+      barra de tinta-Sheet-Sheet(1)_20: 3586241662653579807
+      barra de tinta-Sheet-Sheet(1)_21: -2850053123530110937
+      barra de tinta-Sheet-Sheet(1)_22: 9166867630527415518
+      barra de tinta-Sheet-Sheet(1)_23: 7057736600188354170
+      barra de tinta-Sheet-Sheet(1)_3: 6766890618367424486
+      barra de tinta-Sheet-Sheet(1)_4: 2709696147901581897
+      barra de tinta-Sheet-Sheet(1)_5: 1674841554805556860
+      barra de tinta-Sheet-Sheet(1)_6: 6112700070163991823
+      barra de tinta-Sheet-Sheet(1)_7: -6807225946733096883
+      barra de tinta-Sheet-Sheet(1)_8: -5538849535364353288
+      barra de tinta-Sheet-Sheet(1)_9: -2114274848327570394
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
