@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tile_Esquerdo_comEstalagmites_0: 8700561680167636076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Estalagmites_0: -6377603228471023509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

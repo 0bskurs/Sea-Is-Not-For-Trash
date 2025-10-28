@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tile_direito_semestalagmites_0: 8253464017329115493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

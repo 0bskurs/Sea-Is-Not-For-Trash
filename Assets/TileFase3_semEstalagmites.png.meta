@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      TileFase3_semEstalagmites_0: -7890799008683464415
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
