@@ -11,6 +11,20 @@ TagManager:
   - Pausa
   - Scenery
   - CameraStop
+  - StartSpawn
+  - KillObject
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - zero
+  - one
+  - two
+  - three
+  - four
+  - five
   layers:
   - Default
   - TransparentFX

@@ -3,15 +3,19 @@ using UnityEngine;
 public class Despawn : MonoBehaviour
 {
     //cordenada Y para condicao
-    public float destroyYCoordinate = -5f;
-
+    [SerializeField] private float DestroyTimer;
+    [SerializeField] private float setTimer;
     void Update()
     {
-        // checar a posicao Y
-        if (transform.position.y < destroyYCoordinate)
+        DestroyTimer += Time.deltaTime;
+        //destruir prefab que tem a script
+        if (DestroyTimer > setTimer)
         {
-            //destruir prefab que tem a script
             Destroy(gameObject);
         }
+    }
+    private void OnDisable()
+    {
+        Destroy(gameObject);
     }
 }

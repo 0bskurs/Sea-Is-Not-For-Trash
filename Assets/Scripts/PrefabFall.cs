@@ -27,9 +27,10 @@ public class PrefabFall : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Parar"))
-        {   
+        if ((collision.gameObject.CompareTag("Parar")))
+        {
             touchedCollider = true;
+
         }
     }
    

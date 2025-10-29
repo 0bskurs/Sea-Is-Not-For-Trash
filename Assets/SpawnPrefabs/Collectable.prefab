@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e120a0250921ab4db03efbe2df43275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 2
+  fallSpeed: 6
   fallDirection: {x: 0, y: -1}
   objectWeight: 1
   isComputerPart: 0
@@ -64,7 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 263b82685b5e9e948b8ada85cda7795b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyYCoordinate: -12
+  DestroyTimer: 0
+  setTimer: 30
 --- !u!61 &-7573307612995473923
 BoxCollider2D:
   m_ObjectHideFlags: 0
