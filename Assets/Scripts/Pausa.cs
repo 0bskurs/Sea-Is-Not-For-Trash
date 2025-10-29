@@ -6,13 +6,14 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class Pausa : MonoBehaviour
 {
+    private LifeSystem lifeSystem;
     public void resume()
     {
         StartCoroutine(resumeCoroutine());
     }
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Escape))
+        if (Input.GetKeyUp(KeyCode.Escape) && lifeSystem.died == false)
         {
             StartCoroutine(resumeCoroutine());
         }

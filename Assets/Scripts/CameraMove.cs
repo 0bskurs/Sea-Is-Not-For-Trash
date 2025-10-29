@@ -43,10 +43,11 @@ public class CameraMove : MonoBehaviour
         yield return new WaitForSeconds(3);
             while (_cameraStopBool == false)
         {
-            Camera.main.transform.Translate(0, -0.1f, 0);
-            yield return new WaitForSeconds(0.00125f);
+            Camera.main.transform.Translate(0, -0.2f, 0);
+            yield return new WaitForSeconds(0.05f);
         }
 
 
     }
+    
 }
