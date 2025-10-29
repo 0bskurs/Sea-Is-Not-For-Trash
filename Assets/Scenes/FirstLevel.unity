@@ -39856,6 +39856,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4762918999210086838}
   _cameraStopBool: 0
   time: 0
+  Speed: -0.01
   lifeSystem: {fileID: 784843229258865872}
 --- !u!114 &784843229258865872 stripped
 MonoBehaviour:

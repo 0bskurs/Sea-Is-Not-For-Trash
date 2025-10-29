@@ -8,6 +8,7 @@ public class CameraMove : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private bool _cameraStopBool = false;
     [SerializeField] float time = 0f;
+    [SerializeField] float Speed = -0.0025f;
     [SerializeField] private LifeSystem lifeSystem;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,7 +44,7 @@ public class CameraMove : MonoBehaviour
         yield return new WaitForSeconds(3);
             while (_cameraStopBool == false)
         {
-            Camera.main.transform.Translate(0, -0.1f, 0);
+            Camera.main.transform.Translate(0, Speed, 0);
             yield return new WaitForSeconds(0.00125f);
         }
 
