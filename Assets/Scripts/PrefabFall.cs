@@ -3,27 +3,27 @@ using UnityEngine;
 
 public class PrefabFall : MonoBehaviour
 {
-    public float fallSpeed = 2f; //velocidade de queda
+    public float fallSpeed; //velocidade de queda
+    public float speed;
     public Vector2 fallDirection = Vector2.down; //direcao da queda
     public float objectWeight = 1f;
     public bool isComputerPart;
     public bool touchedCollider;
+    public bool triggerActivated;
     private void Start()
     {
+       
+        speed = 0;
         touchedCollider = false;
-        
+        triggerActivated = false;
     }
     private void FixedUpdate()
     {
-        if (this.gameObject.CompareTag("Coletavel") && touchedCollider == false)
+        if (triggerActivated == true)
         {
-            transform.Translate(fallDirection * fallSpeed * Time.deltaTime * objectWeight);
+            speed = fallSpeed;
+            this.gameObject.transform.Translate(fallDirection * speed * Time.deltaTime * objectWeight);
         }
-        else if (this.gameObject.CompareTag("Trash"))
-        {
-            transform.Translate(fallDirection * fallSpeed * Time.deltaTime * objectWeight);
-        }
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
