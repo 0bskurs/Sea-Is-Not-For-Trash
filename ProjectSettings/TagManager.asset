@@ -25,6 +25,7 @@ TagManager:
   - three
   - four
   - five
+  - TriggerMove
   layers:
   - Default
   - TransparentFX

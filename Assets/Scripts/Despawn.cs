@@ -5,15 +5,20 @@ public class Despawn : MonoBehaviour
     //cordenada Y para condicao
     [SerializeField] private float DestroyTimer;
     [SerializeField] private float setTimer;
+    public bool startDespawnCounter = false;
     void Update()
     {
-        DestroyTimer += Time.deltaTime;
+        if (startDespawnCounter == true)
+        {
+            DestroyTimer += Time.deltaTime;
+        }
         //destruir prefab que tem a script
         if (DestroyTimer > setTimer)
         {
             Destroy(gameObject);
         }
     }
+    
     private void OnDisable()
     {
         Destroy(gameObject);

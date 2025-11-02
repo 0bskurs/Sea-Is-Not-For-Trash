@@ -12,14 +12,21 @@ using System.Linq;
 public class PrefabSpawnNew : MonoBehaviour
 {
     [SerializeField] private PrefabFall prefabFall;
-    [SerializeField] private GameObject prefab;
-    [SerializeField] private bool isMultiple = false;
+    [SerializeField] private bool triggerIsPlayer;
+    [SerializeField] private Despawn despawn;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if ((other.CompareTag("TriggerMove")) && (triggerIsPlayer == false))
         {
+            despawn.startDespawnCounter = true;
             prefabFall.triggerActivated = true;
         }
+        if ((other.CompareTag("Player")) && (triggerIsPlayer == true))
+        {
+            despawn.startDespawnCounter = true;
+            prefabFall.triggerActivated = true;
+        }
+
     }
 
 
