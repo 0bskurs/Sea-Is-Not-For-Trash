@@ -26,6 +26,7 @@ TagManager:
   - four
   - five
   - TriggerMove
+  - warningOff
   layers:
   - Default
   - TransparentFX

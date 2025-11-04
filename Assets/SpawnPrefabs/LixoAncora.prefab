@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyTimer: 0
   setTimer: 10
+  startDespawnCounter: 0
 --- !u!114 &546941135558433016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,10 +165,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 1.5
+  speed: 0
   fallDirection: {x: 0, y: -1}
   objectWeight: 10
   isComputerPart: 0
   touchedCollider: 0
+  triggerActivated: 0
+  warning: {fileID: 0}
 --- !u!50 &3836702795473398138
 Rigidbody2D:
   serializedVersion: 5

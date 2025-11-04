@@ -17,6 +17,7 @@ public class Esquiva : MonoBehaviour
     [SerializeField] private int invincibilityTime = 3;
     [SerializeField] Animator tintaAnimator;
     [SerializeField] Animator barraTintaAnimator;
+    public bool isOnPause;
     private SpriteRenderer spriteRenderer;
     [SerializeField] private GetAnimatorTinta getAnimatorTinta;
     private bool keyPressed;
@@ -30,17 +31,20 @@ public class Esquiva : MonoBehaviour
     }
     private async Task DisableCollisionTemp()
     {
-        getAnimatorTinta.animator.SetBool("Full", false);
-        isOnCooldown = true;
-        Physics2D.IgnoreLayerCollision(6, 7, true);
-        spriteRenderer.color = new Color(1f,1f,1f, 0.5f);
-        await Task.Delay(invincibilityTime * 1000);
-        Physics2D.IgnoreLayerCollision(6, 7, false);
-        spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
-        await Task.Delay(cooldownTime * 900);
-        getAnimatorTinta.animator.SetBool("Full", true);
-        await Task.Delay(cooldownTime * 100);
-        isOnCooldown = false;
+        if (isOnPause == false)
+        {
+            getAnimatorTinta.animator.SetBool("Full", false);
+            isOnCooldown = true;
+            Physics2D.IgnoreLayerCollision(6, 7, true);
+            spriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
+            await Task.Delay(invincibilityTime * 1000);
+            Physics2D.IgnoreLayerCollision(6, 7, false);
+            spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+            await Task.Delay(cooldownTime * 900);
+            getAnimatorTinta.animator.SetBool("Full", true);
+            await Task.Delay(cooldownTime * 100);
+            isOnCooldown = false;
+        }
     }
     private async Task EnableDisableSprite()
     {
