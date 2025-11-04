@@ -12,6 +12,7 @@ using System.Linq;
 public class PrefabSpawnNew : MonoBehaviour
 {
     [SerializeField] private PrefabFall prefabFall;
+    [SerializeField] private PrefabFall prefabFall_StartObject;
     [SerializeField] private bool triggerIsPlayer;
     [SerializeField] private Despawn despawn;
     private void OnTriggerEnter2D(Collider2D other)
@@ -21,8 +22,9 @@ public class PrefabSpawnNew : MonoBehaviour
             despawn.startDespawnCounter = true;
             prefabFall.triggerActivated = true;
         }
-        if ((other.CompareTag("Player")) && (triggerIsPlayer == true))
+        if ((other.CompareTag("Player")) && (triggerIsPlayer == true) && (prefabFall_StartObject.triggerActivated == true))
         {
+            
             despawn.startDespawnCounter = true;
             prefabFall.triggerActivated = true;
         }

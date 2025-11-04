@@ -89,16 +89,16 @@ public class LifeSystem : MonoBehaviour
     {
         
 
-        if (whichHeartEnableDisable != -1)
-        {
-            for (int i = 0; i < _healthSprites.Count; i++)
-            {
-                _healthSprites[i].enabled = false;
-            }
-        }
-        Currentlife = 0;
+        //if (whichHeartEnableDisable != -1)
+        //{
+        //    for (int i = 0; i < _healthSprites.Count; i++)
+        //    {
+        //        _healthSprites[i].enabled = false;
+        //    }
+        //}
+        //Currentlife = 0;
         Physics2D.IgnoreLayerCollision(6, 7, false);
-        await Task.Delay(2000);
+        //await Task.Delay(2000);
         SceneManager.LoadSceneAsync(2);
         
 

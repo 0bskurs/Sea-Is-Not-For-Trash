@@ -26,10 +26,7 @@ public class Warning : MonoBehaviour
         if (other.gameObject.CompareTag("TriggerMove"))
         {
             Invoke("Preset", 0.1f);
-            if (WarningOff == true)
-            {
-                Destroy(WarningPrefab);
-            }
+            
         }
     }
 
