@@ -40355,6 +40355,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3224192964034252007, guid: ec25afa82d058cf4185b980ea7be7c24, type: 3}
     - target: {fileID: 7214676339753387644, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
+      propertyPath: cooldownTime
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7214676339753387644, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
       propertyPath: _canvasParent
       value: 
       objectReference: {fileID: 0}
@@ -40370,6 +40374,10 @@ PrefabInstance:
       propertyPath: getAnimatorTinta
       value: 
       objectReference: {fileID: 1362974237}
+    - target: {fileID: 7214676339753387644, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
+      propertyPath: invincibilityTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7214676339753387644, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
       propertyPath: barraTintaAnimator
       value: 

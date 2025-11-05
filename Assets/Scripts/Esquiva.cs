@@ -13,8 +13,8 @@ public class Esquiva : MonoBehaviour
     [SerializeField] private InputAction PlayerController;
     [SerializeField] public InputActionReference inputActionReference;
     [SerializeField] private bool isOnCooldown = false;
-    [SerializeField] private int cooldownTime = 15;
-    [SerializeField] private int invincibilityTime = 3;
+    [SerializeField] private int cooldownTime = 2;
+    [SerializeField] private int invincibilityTime = 1;
     [SerializeField] Animator tintaAnimator;
     [SerializeField] Animator barraTintaAnimator;
     public bool isOnPause;
@@ -24,6 +24,7 @@ public class Esquiva : MonoBehaviour
     private void Start()
     {
         spriteRenderer = player.GetComponent<SpriteRenderer>();
+        
     }
     private void FixedUpdate()
     {
@@ -33,15 +34,17 @@ public class Esquiva : MonoBehaviour
     {
         if (isOnPause == false)
         {
+            getAnimatorTinta.animator.SetBool("Started", true);
             getAnimatorTinta.animator.SetBool("Full", false);
+            await Task.Delay(invincibilityTime * 100);
             isOnCooldown = true;
             Physics2D.IgnoreLayerCollision(6, 7, true);
             spriteRenderer.color = new Color(1f, 1f, 1f, 0.5f);
-            await Task.Delay(invincibilityTime * 1000);
+            await Task.Delay(invincibilityTime * 900);
+            getAnimatorTinta.animator.SetBool("Full", true);
             Physics2D.IgnoreLayerCollision(6, 7, false);
             spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
             await Task.Delay(cooldownTime * 900);
-            getAnimatorTinta.animator.SetBool("Full", true);
             await Task.Delay(cooldownTime * 100);
             isOnCooldown = false;
         }

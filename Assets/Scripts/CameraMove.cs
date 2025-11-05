@@ -40,7 +40,7 @@ public class CameraMove : MonoBehaviour
 
     private IEnumerator<WaitForSeconds> BringDownCamera()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0);
             while (_cameraStopBool == false)
         {
             Camera.main.transform.Translate(0, -0.2f, 0);
