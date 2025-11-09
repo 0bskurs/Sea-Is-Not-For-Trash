@@ -6,33 +6,37 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class Pausa : MonoBehaviour
 {
+    
     [SerializeField] private Esquiva esquiva;
-    private LifeSystem lifeSystem;
+    [SerializeField] private LifeSystem lifeSystem;
+    [SerializeField] ChamarPausa chamarPausa;
     public void resume()
     {
-        StartCoroutine(resumeCoroutine());
+        chamarPausa.calledPause = false;
+        esquiva.isOnPause = false;
+        Time.timeScale = 1f;
+        SceneManager.UnloadSceneAsync(7);
     }
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.Escape) && lifeSystem.died == false)
         {
-            StartCoroutine(resumeCoroutine());
+            chamarPausa.calledPause = false;
+            esquiva.isOnPause = false;
+            Time.timeScale = 1f;
+            SceneManager.UnloadSceneAsync(7);
         }
     }
-    private IEnumerator resumeCoroutine()
-    {
-        esquiva.isOnPause = false;
-        Time.timeScale = 1f;
-        SceneManager.UnloadSceneAsync(7);
-        yield return new WaitForSeconds(0.3f);
-    }
+    
     public static void Open()
     {
+        
         SceneManager.LoadSceneAsync(7, LoadSceneMode.Additive);
     }
     
     public void Principal()
     {
+        chamarPausa.calledPause = false;
         Physics2D.IgnoreLayerCollision(6, 7, false);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);

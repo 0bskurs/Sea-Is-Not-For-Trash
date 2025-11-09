@@ -98,7 +98,7 @@ public class LifeSystem : MonoBehaviour
         //}
         //Currentlife = 0;
         Physics2D.IgnoreLayerCollision(6, 7, false);
-        //await Task.Delay(2000);
+        await Task.Delay(100);
         SceneManager.LoadSceneAsync(2);
         
 

@@ -34,6 +34,7 @@ public class Esquiva : MonoBehaviour
     {
         if (isOnPause == false)
         {
+            
             getAnimatorTinta.animator.SetBool("Started", true);
             getAnimatorTinta.animator.SetBool("Full", false);
             await Task.Delay(invincibilityTime * 100);
@@ -47,6 +48,10 @@ public class Esquiva : MonoBehaviour
             await Task.Delay(cooldownTime * 900);
             await Task.Delay(cooldownTime * 100);
             isOnCooldown = false;
+        }
+        if (isOnPause == true)
+        {
+            Debug.Log("TELA PAUSADA!!!! SCRIPT DE ESQUIVA!!!");
         }
     }
     private async Task EnableDisableSprite()
