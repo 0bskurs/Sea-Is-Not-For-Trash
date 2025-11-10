@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class LifeSystem : MonoBehaviour
 {
     [SerializeField] private int MaxLife = 3;
-    [SerializeField] private int Currentlife;
+    public int Currentlife = 3;
     [SerializeField] private List<Image> _healthSprites;
     //[SerializeField] private GetAnimatorVida getAnimatorVida;
     //[SerializeField] private int vida;
@@ -38,7 +38,7 @@ public class LifeSystem : MonoBehaviour
         {
            
             Debug.Log("Em contato com lixo");
-            Invoke("DisableImages", 0.1f);
+            Invoke("DisableImages", 0f);
             Destroy(other.gameObject);
 
         }
@@ -50,16 +50,19 @@ public class LifeSystem : MonoBehaviour
             Destroy(other.gameObject);
 
         }
-        if (other.CompareTag("KillObject"))
-        {
-            Debug.Log("Em contato com parede");
-            Invoke("Die", 0.1f);
-            died = true;
-        }
+        
 
     }
-    
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("KillObject"))
+        {
+            Debug.Log("Em contato com parede");
+            Invoke("Die", 0f);
+            died = true;
+        }
+    }
 
     async Task DisableImages()
     {
@@ -78,7 +81,7 @@ public class LifeSystem : MonoBehaviour
         if (Currentlife <= 0)
         {
             Physics2D.IgnoreLayerCollision(6, 7, false);
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             SceneManager.LoadSceneAsync(2);
         } // Subtituir por uma troca de cena,SceneManagement
         await Task.Delay(3000);
@@ -96,9 +99,9 @@ public class LifeSystem : MonoBehaviour
         //        _healthSprites[i].enabled = false;
         //    }
         //}
-        //Currentlife = 0;
+        Currentlife = 0;
         Physics2D.IgnoreLayerCollision(6, 7, false);
-        await Task.Delay(100);
+        await Task.Delay(1000);
         SceneManager.LoadSceneAsync(2);
         
 

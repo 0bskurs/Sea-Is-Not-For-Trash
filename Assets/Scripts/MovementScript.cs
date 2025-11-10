@@ -10,8 +10,9 @@ public class MovementScript : MonoBehaviour
     [SerializeField] private Rigidbody2D _rigidbody;
     Vector2 movement = Vector2.zero;
     GameObject _gameObject;
-    
-   public float horizontalMovement;
+    [SerializeField] LifeSystem lifeSystem;
+
+    public float horizontalMovement;
 
     private void Awake()
     {
@@ -21,8 +22,17 @@ public class MovementScript : MonoBehaviour
     }
     private void Update()
     {
-        movement = new Vector2(horizontalMovement, 0);
-        _rigidbody.linearVelocity = movement * speed;
+        if (lifeSystem.Currentlife > 0)
+        {
+            movement = new Vector2(horizontalMovement, 0);
+            _rigidbody.linearVelocity = movement * speed;
+        }
+        if (lifeSystem.Currentlife <= 0)
+        {
+            movement = new Vector2(0, 0);
+            _rigidbody.linearVelocity = movement;
+        }
+
     }
     public void Move(InputAction.CallbackContext context)
     {

@@ -17,6 +17,7 @@ public class Esquiva : MonoBehaviour
     [SerializeField] private int invincibilityTime = 1;
     [SerializeField] Animator tintaAnimator;
     [SerializeField] Animator barraTintaAnimator;
+    
     public bool isOnPause;
     private SpriteRenderer spriteRenderer;
     [SerializeField] private GetAnimatorTinta getAnimatorTinta;
@@ -28,7 +29,7 @@ public class Esquiva : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+       
     }
     private async Task DisableCollisionTemp()
     {
