@@ -530,7 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esquiva: {fileID: 7214676339753387644, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
   lifeSystem: {fileID: 8001813017133528798, guid: abd76f41dfdadd84d84e90c173b65140, type: 3}
-  chamarPausa: {fileID: 2732985551907981392, guid: 519974cd1749c494495914e9fe2764e2, type: 3}
+  chamarPausa: {fileID: 3293119204923245997, guid: bfd6b26bcf084fd4eafcda375bfc818a, type: 3}
 --- !u!114 &750826780
 MonoBehaviour:
   m_ObjectHideFlags: 0
