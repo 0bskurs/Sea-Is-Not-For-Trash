@@ -40,6 +40,7 @@ public class LifeSystem : MonoBehaviour
             Debug.Log("Em contato com lixo");
             Invoke("DisableImages", 0f);
             Destroy(other.gameObject);
+            Destroy(other.transform.parent.gameObject);
 
         }
         if (other.CompareTag("Heal"))
@@ -47,7 +48,7 @@ public class LifeSystem : MonoBehaviour
 
             Debug.Log("Em contato com cura");
             Invoke("EnableImages", 0.1f);
-            Destroy(other.gameObject);
+            Destroy(other.transform.parent.gameObject);
 
         }
         

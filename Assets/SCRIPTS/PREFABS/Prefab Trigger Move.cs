@@ -12,23 +12,41 @@ using System.Linq;
 public class PrefabSpawnNew : MonoBehaviour
 {
     [SerializeField] private PrefabFall prefabFall;
-    [SerializeField] private PrefabFall prefabFall_StartObject;
-    [SerializeField] private bool triggerIsPlayer;
+    [SerializeField] private SpriteRenderer rendererPrefab2;
+    [SerializeField] private Collider2D collision;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Despawn despawn;
+    public bool startMovingTrigger;
     private void OnTriggerEnter2D(Collider2D other)
+    
     {
-        if ((other.CompareTag("TriggerMove")) && (triggerIsPlayer == false))
+        if ((other.CompareTag("TriggerMove")) && (startMovingTrigger == true))
         {
+            if(rendererPrefab2 != null)
+            {
+                rendererPrefab2.enabled = true;
+            }
             despawn.startDespawnCounter = true;
             prefabFall.triggerActivated = true;
+            spriteRenderer.enabled = true;
+            collision.enabled = true;
         }
-        if ((other.CompareTag("Player")) && (triggerIsPlayer == true) && (prefabFall_StartObject.triggerActivated == true))
+        if ((other.CompareTag("TriggerPlayer")))
         {
+            startMovingTrigger = true;
             
-            despawn.startDespawnCounter = true;
-            prefabFall.triggerActivated = true;
         }
 
+    }
+    private void Start()
+    {
+        if(rendererPrefab2 != null)
+        {
+            rendererPrefab2.enabled = false;
+        }
+        collision.enabled = false;
+        spriteRenderer.enabled = false;
+        startMovingTrigger = false;
     }
 
 

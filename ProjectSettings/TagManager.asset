@@ -27,6 +27,8 @@ TagManager:
   - five
   - TriggerMove
   - warningOff
+  - TriggerPlayer
+  - UI
   layers:
   - Default
   - TransparentFX

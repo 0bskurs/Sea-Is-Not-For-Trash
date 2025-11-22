@@ -15,7 +15,7 @@ public class Warning : MonoBehaviour
 {
     [SerializeField] GameObject TrashPrefab;
     [SerializeField] GameObject WarningPrefab;
-    [SerializeField] GameObject parent;
+    public Transform transformParent;
     [SerializeField] Camera camera;
     [SerializeField] Vector2 camera_coordinates;
     [SerializeField] private float PrefabPositionX;
@@ -37,7 +37,8 @@ public class Warning : MonoBehaviour
         await Task.Delay(100);
         Vector2 coordinates = new Vector2(PrefabPositionX, 7 + camera_coordinates.y);
         var assignParent = Instantiate(WarningPrefab, coordinates, Quaternion.identity);
-        assignParent.transform.parent = parent.transform;
+        assignParent.transform.SetParent(transformParent);
     }
+    
     
 }
