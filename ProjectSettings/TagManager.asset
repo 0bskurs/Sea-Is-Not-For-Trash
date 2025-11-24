@@ -29,6 +29,11 @@ TagManager:
   - warningOff
   - TriggerPlayer
   - UI
+  - GPU
+  - Processador
+  - Placa Mae
+  - Gabinete
+  - Reiniciar
   layers:
   - Default
   - TransparentFX

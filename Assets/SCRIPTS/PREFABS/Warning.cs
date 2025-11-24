@@ -19,14 +19,14 @@ public class Warning : MonoBehaviour
     [SerializeField] Camera camera;
     [SerializeField] Vector2 camera_coordinates;
     [SerializeField] private float PrefabPositionX;
-    public bool WarningOff;
+    [SerializeField] bool stopTrigger = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("TriggerMove"))
+        if (other.gameObject.CompareTag("TriggerMove") && stopTrigger == false)
         {
-            Invoke("Preset", 0.1f);
-            
+            Invoke("Preset", 0f);
+            stopTrigger = true;
         }
     }
 
@@ -34,7 +34,6 @@ public class Warning : MonoBehaviour
     {
         PrefabPositionX = TrashPrefab.transform.position.x;
         camera_coordinates = camera.transform.position;
-        await Task.Delay(100);
         Vector2 coordinates = new Vector2(PrefabPositionX, 7 + camera_coordinates.y);
         var assignParent = Instantiate(WarningPrefab, coordinates, Quaternion.identity);
         assignParent.transform.SetParent(transformParent);

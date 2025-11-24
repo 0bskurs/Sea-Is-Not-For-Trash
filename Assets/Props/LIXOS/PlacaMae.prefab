@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5876046242211902363}
   m_Layer: 7
   m_Name: PlacaMae
-  m_TagString: Coletavel
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,14 +49,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e120a0250921ab4db03efbe2df43275, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 6
+  fallSpeed: 3
   speed: 0
   fallDirection: {x: 0, y: -1}
   objectWeight: 1
   isComputerPart: 0
   touchedCollider: 0
   triggerActivated: 0
-  warning: {fileID: 0}
 --- !u!114 &7037096701803280707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,8 +69,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTimer: 0
-  setTimer: 10
+  setTimer: 12
+  gameObject: {fileID: 7333762542561478329}
   startDespawnCounter: 0
+  thisObjectWarning: 0
 --- !u!61 &-7573307612995473923
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabFall: {fileID: -875059941900584040}
   rendererPrefab2: {fileID: 0}
-  collision: {fileID: -7573307612995473923}
+  collision: {fileID: 5422306467287884373}
   spriteRenderer: {fileID: 219074525825517833}
   despawn: {fileID: 7037096701803280707}
   startMovingTrigger: 0
@@ -148,13 +149,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71f24d7b0628ba44ea52b8ffe410488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrashPrefab: {fileID: 0}
-  WarningPrefab: {fileID: 0}
+  TrashPrefab: {fileID: 7333762542561478329}
+  WarningPrefab: {fileID: 1688768320256288052, guid: e9e936c2a4ff9654bb458d04f553d927, type: 3}
   transformParent: {fileID: 0}
   camera: {fileID: 0}
   camera_coordinates: {x: 0, y: 0}
   PrefabPositionX: 0
-  WarningOff: 0
 --- !u!1 &9182339370051959340
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,9 +166,10 @@ GameObject:
   - component: {fileID: 3477627922251215438}
   - component: {fileID: 219074525825517833}
   - component: {fileID: 8245656824107392397}
+  - component: {fileID: 5422306467287884373}
   m_Layer: 7
   m_Name: TiltSprite
-  m_TagString: Untagged
+  m_TagString: Placa Mae
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,3 +257,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxTiltAngle: 180
+--- !u!61 &5422306467287884373
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182339370051959340}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.28, y: 0.28}
+    newSize: {x: 0.32, y: 0.18}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.28, y: 0.28}
+  m_EdgeRadius: 0

@@ -11,7 +11,7 @@ public class PrefabFall : MonoBehaviour
     public bool isComputerPart;
     public bool touchedCollider;
     public bool triggerActivated;
-    [SerializeField] private Warning warning;
+    
     
     private void Start()
     {
@@ -35,11 +35,7 @@ public class PrefabFall : MonoBehaviour
             touchedCollider = true;
 
         }
-        if (triggerActivated == true && collision.gameObject.CompareTag("warningOff"))
-        {
-            warning.WarningOff = true;
-            Destroy(collision.gameObject);
-        }
+        
     }
    
     

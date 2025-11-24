@@ -231,8 +231,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTimer: 0
-  setTimer: 10
+  setTimer: 12
+  gameObject: {fileID: 5507364790310168395}
   startDespawnCounter: 0
+  thisObjectWarning: 0
 --- !u!114 &546941135558433016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +254,6 @@ MonoBehaviour:
   isComputerPart: 0
   touchedCollider: 0
   triggerActivated: 0
-  warning: {fileID: 5070629955059589021}
 --- !u!50 &3836702795473398138
 Rigidbody2D:
   serializedVersion: 5
@@ -293,6 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabFall: {fileID: 546941135558433016}
+  rendererPrefab2: {fileID: 0}
   collision: {fileID: 1782947607918927038}
   spriteRenderer: {fileID: 941517308856175575}
   despawn: {fileID: 1829793251926410252}
@@ -315,4 +317,3 @@ MonoBehaviour:
   camera: {fileID: 0}
   camera_coordinates: {x: 0, y: 0}
   PrefabPositionX: 0
-  WarningOff: 0

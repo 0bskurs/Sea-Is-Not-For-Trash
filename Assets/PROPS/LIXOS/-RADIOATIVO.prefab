@@ -120,8 +120,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTimer: 0
-  setTimer: 10
+  setTimer: 12
+  gameObject: {fileID: 7040086764765460682}
   startDespawnCounter: 0
+  thisObjectWarning: 0
 --- !u!114 &5824187498176628779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +143,6 @@ MonoBehaviour:
   isComputerPart: 0
   touchedCollider: 0
   triggerActivated: 0
-  warning: {fileID: 8800797061796054170}
 --- !u!58 &1517387496284133219
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -241,7 +242,6 @@ MonoBehaviour:
   camera: {fileID: 0}
   camera_coordinates: {x: 0, y: 0}
   PrefabPositionX: 0
-  WarningOff: 0
 --- !u!1 &7799634382565923098
 GameObject:
   m_ObjectHideFlags: 0

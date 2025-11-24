@@ -113,8 +113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DestroyTimer: 0
-  setTimer: 6
+  setTimer: 2
+  gameObject: {fileID: 4556102543900992731}
   startDespawnCounter: 0
+  thisObjectWarning: 1
 --- !u!61 &3658537446019938060
 BoxCollider2D:
   m_ObjectHideFlags: 0
