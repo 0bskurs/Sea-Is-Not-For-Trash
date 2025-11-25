@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public void StartGame()
+    public void Tutorial()
     {
         SceneManager.LoadSceneAsync(8);
     }
@@ -19,5 +19,9 @@ public class ChangeScene : MonoBehaviour
     public void Creditos()
     {
         SceneManager.LoadSceneAsync(9);
+    }
+    public void StartGame()
+    {
+        SceneManager.LoadSceneAsync(1);
     }
 }

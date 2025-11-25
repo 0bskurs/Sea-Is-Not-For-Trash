@@ -8,6 +8,7 @@ public class Despawn : MonoBehaviour
     [SerializeField] GameObject gameObject;
     public bool startDespawnCounter = false;
     [SerializeField] private bool thisObjectWarning;
+    
     void Update()
     {
         if (thisObjectWarning == true)
@@ -18,13 +19,16 @@ public class Despawn : MonoBehaviour
         {
             DestroyTimer += Time.deltaTime;
         }
-        //destruir prefab que tem a script
+            //destruir prefab que tem a script
         if (DestroyTimer > setTimer)
         {
             Destroy(gameObject);
         }
+        
+        
     }
     
+
     private void OnDisable()
     {
         Destroy(gameObject);

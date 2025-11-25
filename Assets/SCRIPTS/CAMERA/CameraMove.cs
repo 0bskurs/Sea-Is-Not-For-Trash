@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMove : MonoBehaviour
 {
@@ -28,6 +29,11 @@ public class CameraMove : MonoBehaviour
     private void FixedUpdate()
     {
         time += Time.deltaTime;
+        if (_cameraStopBool == true)
+        {
+            Physics2D.IgnoreLayerCollision(6, 7, false);
+            SceneManager.LoadSceneAsync(3);
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

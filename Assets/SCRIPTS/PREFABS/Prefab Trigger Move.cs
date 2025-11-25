@@ -15,8 +15,9 @@ public class PrefabSpawnNew : MonoBehaviour
     [SerializeField] private SpriteRenderer rendererPrefab2;
     [SerializeField] private Collider2D collision;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Despawn despawn;
+    [SerializeField] private Despawn despawn = null;
     public bool startMovingTrigger;
+    [SerializeField] private bool IsComputer;
     private void OnTriggerEnter2D(Collider2D other)
     
     {
@@ -26,10 +27,13 @@ public class PrefabSpawnNew : MonoBehaviour
             {
                 rendererPrefab2.enabled = true;
             }
-            despawn.startDespawnCounter = true;
             prefabFall.triggerActivated = true;
             spriteRenderer.enabled = true;
             collision.enabled = true;
+            if (IsComputer == false && despawn != null)
+            {
+                despawn.startDespawnCounter = true;
+            }
         }
         if ((other.CompareTag("TriggerPlayer")))
         {
