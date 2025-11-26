@@ -6,7 +6,7 @@ public class ChangeScene : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Tutorial()
     {
-        SceneManager.LoadSceneAsync(8);
+        SceneManager.LoadSceneAsync(10);
     }
     public void MenuPrincipal()
     {

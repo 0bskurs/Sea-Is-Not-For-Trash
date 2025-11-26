@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SCENES/USADAS/CREDITOS.unity
     guid: c82bd5dd4fbce374e93c4efadad75765
+  - enabled: 1
+    path: Assets/SCENES/USADAS/VIDEO.unity
+    guid: 929cce850dca3a24f9d4bb5611b09231
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2cf9ae33ecd8fde42a38358d70c6dcd2, type: 3}
   m_UseUCBPForAssetBundles: 0
