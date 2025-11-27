@@ -11,6 +11,8 @@ using UnityEngine.SceneManagement;
 using System.Linq;
 public class PrefabSpawnNew : MonoBehaviour
 {
+    AudioSource m_MyAudioSource;
+
     [SerializeField] private PrefabFall prefabFall;
     [SerializeField] private SpriteRenderer rendererPrefab2;
     [SerializeField] private Collider2D collision;
@@ -30,6 +32,8 @@ public class PrefabSpawnNew : MonoBehaviour
             prefabFall.triggerActivated = true;
             spriteRenderer.enabled = true;
             collision.enabled = true;
+            m_MyAudioSource.Play();
+            
             if (IsComputer == false && despawn != null)
             {
                 despawn.startDespawnCounter = true;
@@ -44,6 +48,7 @@ public class PrefabSpawnNew : MonoBehaviour
     }
     private void Start()
     {
+        m_MyAudioSource = GetComponent<AudioSource>();
         if(rendererPrefab2 != null)
         {
             rendererPrefab2.enabled = false;

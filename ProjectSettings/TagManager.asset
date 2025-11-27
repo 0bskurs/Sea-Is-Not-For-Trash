@@ -34,6 +34,7 @@ TagManager:
   - Placa Mae
   - Gabinete
   - Reiniciar
+  - DontDelete
   layers:
   - Default
   - TransparentFX

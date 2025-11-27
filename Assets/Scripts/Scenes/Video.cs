@@ -9,14 +9,10 @@ public class Video : MonoBehaviour
     {
         length_ =  (float) GetComponent<VideoPlayer>().clip.length;
     }
-    private void FixedUpdate()
-    {
-        _time += Time.deltaTime;
-        
-    }
     private void Update()
     {
-        if (_time >= length_)
+        _time += Time.deltaTime;
+        if (_time > length_)
         {
             SceneManager.LoadSceneAsync(8);
         }
