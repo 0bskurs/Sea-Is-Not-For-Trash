@@ -43,14 +43,14 @@ public class LifeSystem : MonoBehaviour
             Destroy(other.transform.parent.gameObject);
 
         }
-        if (other.CompareTag("Heal"))
-        {
+        //if (other.CompareTag("Heal"))
+        //{
 
-            Debug.Log("Em contato com cura");
-            Invoke("EnableImages", 0.1f);
-            Destroy(other.transform.parent.gameObject);
+        //    Debug.Log("Em contato com cura");
+        //    Invoke("EnableImages", 0.1f);
+        //    Destroy(other.transform.parent.gameObject);
 
-        }
+        //}
         
 
     }
@@ -111,31 +111,31 @@ public class LifeSystem : MonoBehaviour
     {
         Physics2D.IgnoreLayerCollision(6, 7, false);
     }
-    async Task EnableImages()
-    {
-        if (Currentlife < MaxLife && Currentlife > 0)
-        {
-            Physics2D.IgnoreLayerCollision(6, 7, true);
-            Currentlife += 1;
-            whichHeartEnableDisable += 1;
-            await Task.Delay(250);
-            _healthSprites[whichHeartEnableDisable].enabled = true;
-            await Task.Delay(1250);
-            Physics2D.IgnoreLayerCollision(6, 7, false);
+    //async Task EnableImages()
+    //{
+    //    if (Currentlife < MaxLife && Currentlife > 0)
+    //    {
+    //        Physics2D.IgnoreLayerCollision(6, 7, true);
+    //        Currentlife += 1;
+    //        whichHeartEnableDisable += 1;
+    //        await Task.Delay(250);
+    //        _healthSprites[whichHeartEnableDisable].enabled = true;
+    //        await Task.Delay(1250);
+    //        Physics2D.IgnoreLayerCollision(6, 7, false);
 
-        }
-        //Currentlife += 1;
-        //if (whichHeartEnableDisable != -1 && Currentlife < MaxLife)
-        //{
-        //    _healthSprites[whichHeartEnableDisable].enabled = true;
-        //}
-        //if (Currentlife > MaxLife)
-        //{
-        //    Currentlife = MaxLife;
-        //    Physics2D.IgnoreLayerCollision(6, 7, false);
-        //}
-        //vida = Currentlife;
-        //getAnimatorVida.animator.SetFloat("Vida", vida);
-    }
+    //    }
+    //    //Currentlife += 1;
+    //    //if (whichHeartEnableDisable != -1 && Currentlife < MaxLife)
+    //    //{
+    //    //    _healthSprites[whichHeartEnableDisable].enabled = true;
+    //    //}
+    //    //if (Currentlife > MaxLife)
+    //    //{
+    //    //    Currentlife = MaxLife;
+    //    //    Physics2D.IgnoreLayerCollision(6, 7, false);
+    //    //}
+    //    //vida = Currentlife;
+    //    //getAnimatorVida.animator.SetFloat("Vida", vida);
+    //}
 
     }

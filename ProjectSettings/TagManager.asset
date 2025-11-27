@@ -35,6 +35,7 @@ TagManager:
   - Gabinete
   - Reiniciar
   - DontDelete
+  - Audio
   layers:
   - Default
   - TransparentFX

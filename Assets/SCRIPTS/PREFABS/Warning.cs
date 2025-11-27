@@ -21,10 +21,18 @@ public class Warning : MonoBehaviour
     [SerializeField] private float PrefabPositionX;
     [SerializeField] bool stopTrigger = false;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("TriggerMove") && stopTrigger == false)
         {
+            audioManager.PlaySFX(audioManager.spawn);
             Invoke("Preset", 0f);
             stopTrigger = true;
         }

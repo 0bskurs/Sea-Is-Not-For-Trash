@@ -20,6 +20,8 @@ public class PrefabSpawnNew : MonoBehaviour
     [SerializeField] private Despawn despawn = null;
     public bool startMovingTrigger;
     [SerializeField] private bool IsComputer;
+
+    
     private void OnTriggerEnter2D(Collider2D other)
     
     {
@@ -58,6 +60,7 @@ public class PrefabSpawnNew : MonoBehaviour
         startMovingTrigger = false;
     }
 
+    
 
     //[SerializeField] List<GameObject> Prefabs;
     //[SerializeField] List<GameObject> CollidablesTrigger;
